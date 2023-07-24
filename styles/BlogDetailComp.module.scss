@@ -1,0 +1,146 @@
+@import "./mixin.scss";
+@import "./partials.scss";
+
+.BlogsGridContainer {
+  @include maxWidth;
+  padding-block: 50px;
+
+  .desc {
+    margin-bottom: 45px;
+  }
+
+  .SharedPostRow {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 20px;
+    flex-wrap: wrap;
+
+    .col_half {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+
+      .likes_btn {
+        display: flex;
+        align-items: self-end;
+        border: 1px solid;
+        padding: 5px;
+        width: 50px;
+        justify-content: space-between;
+        border-radius: 4px;
+        cursor: pointer;
+        svg {
+          font-size: 18px;
+        }
+        p {
+          font-weight: 900;
+        }
+      }
+      .social_btn {
+        display: flex;
+        align-items: self-end;
+        border: 1px solid #191919;
+        padding: 5px 8px;
+        justify-content: space-between;
+        cursor: pointer;
+        border-radius: 4px;
+        svg {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .SharedPostRow1 {
+    display: flex;
+    justify-content: space-between;
+    .col_half {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+
+      .likes_btn {
+        display: flex;
+        align-items: self-end;
+        border: 1px solid;
+        padding: 5px;
+        width: 50px;
+        justify-content: space-between;
+        border-radius: 4px;
+        cursor: pointer;
+        svg {
+          font-size: 18px;
+        }
+        p {
+          font-weight: 900;
+        }
+      }
+      .social_btn {
+        display: flex;
+        align-items: self-end;
+        border: 1px solid #191919;
+        padding: 5px 8px;
+        justify-content: space-between;
+        cursor: pointer;
+        border-radius: 4px;
+        svg {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .row {
+    width: 100%;
+
+    .col_full {
+      width: 100%;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .row_img {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        position: absolute;
+        bottom: 8%;
+        left: 5%;
+      }
+
+      .row_img_left {
+        right: 5%;
+      }
+
+      .type {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        .typeP {
+          color: #fff;
+          display: flex;
+          align-items: center;
+        }
+        .borderTypeP {
+          border: 1px solid;
+          padding: 5px 9px;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
+
+.BlogsGridContainer_Arabic {
+  .row{
+    .row_img {
+      left: unset;
+      right: 5%;
+    }
+  }
+}

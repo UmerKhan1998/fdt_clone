@@ -1,0 +1,274 @@
+@import "./mixin.scss";
+@import "./partials.scss";
+
+.Conatct {
+  width: 100%;
+  .Conatct_title {
+    width: 100%;
+    padding: 60px 0px 40px;
+    .Conatct_title_wrapper {
+      @include maxWidth;
+      h2 {
+        font-size: 2.1rem;
+        width: 50%;
+        color: $black;
+        font-weight: 800;
+        font-family: $font-bold;
+        
+      }
+      @media screen and (max-width: 900px) {
+        h2 {
+          font-size: 1.7rem;
+          width: 70%;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        h2 {
+          font-size: 1.5rem;
+          width: 80%;
+        }
+      }
+      @media screen and (max-width: 400px) {
+        h2 {
+          font-size: 1.3rem;
+          width: 90%;
+        }
+      }
+    }
+  }
+  .Conatct_main {
+    width: 100%;
+    padding-bottom: 100px;
+    .Conatct_main_wrapper {
+      @include maxWidth;
+      max-width: 1480px;
+      padding-left: 0px;
+      padding-right: 12rem;
+      display: flex;
+      align-items: flex-start;
+      .Conatct_main_left_images {
+        flex: 2;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(5, 1fr);
+        .Conatct_main_image {
+          position: relative;
+          background-color: black;
+          height: 220px;
+          img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+          }
+        }
+        .Conatct_main_image:nth-child(1) {
+          grid-column-start: 1;
+          grid-column-end: 4;
+        }
+        .Conatct_main_image:nth-child(2) {
+          grid-column-start: 4;
+          grid-column-end: 6;
+        }
+        .Conatct_main_image:nth-child(3) {
+          grid-column-start: 1;
+          grid-column-end: 6;
+          height: 160px;
+        }
+        .Conatct_main_image:nth-child(4) {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          height: 180px;
+        }
+        .Conatct_main_image:nth-child(5) {
+          grid-column-start: 3;
+          grid-column-end: 6;
+          height: 180px;
+        }
+      }
+
+      .Conatct_main_right {
+        width: 100%;
+        flex: 2;
+        padding-left: 3rem;
+        .Conatct_form {
+          width: 100%;
+          .Conatct_form_boxs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            .Conatct_form_box {
+              flex: 1 1 48%;
+              display: flex;
+              flex-direction: column;
+              &:last-child {
+                flex-basis: 100%;
+              }
+              label {
+                font-family: $font-bold;
+                font-style: normal;
+                font-size: 0.9rem;
+                font-weight: 600;
+                line-height: 29px;
+                color: #191919;
+              }
+              input {
+                @include input(10px);
+                border-radius: 8px;
+              }
+              textarea {
+                border: none;
+                outline: none;
+                background-color: transparent;
+                border: 0.5px solid #555;
+                padding: 10px;
+                border-radius: 8px;
+                font-size: 0.9rem;
+                resize: vertical;
+              }
+            }
+          }
+          .Conatct_form_action {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 26px;
+            button {
+              @include button_animate(16px 40px, 8px, 3px solid $black);
+              background-color: $black;
+              color: $white;
+              font-size: 1rem;
+            }
+          }
+        }
+        @media screen and (max-width: 600px) {
+          padding-left: 0px;
+        }
+      }
+      @media screen and (max-width: 1350px) {
+        padding-right: 8rem;
+      }
+      @media screen and (max-width: 1200px) {
+        padding-right: 3rem;
+      }
+      @media screen and (max-width: 1000px) {
+        flex-direction: column;
+        gap: 60px;
+        padding-right: 3rem;
+      }
+      @media screen and (max-width: 600px) {
+        padding-right: 1.5rem;
+      }
+    }
+  }
+}
+
+.Conatct_Arabic {
+  .Conatct_title {
+    .Conatct_title_wrapper {
+      h2 {
+        font-family: $font-Arabic;
+      }
+    }
+  }
+  .Conatct_main {
+    .Conatct_main_wrapper {
+      padding-left: 12px;
+      padding-right: 0rem;
+      .Conatct_main_right {
+        padding-left: 0;
+        padding-right: 3rem;
+        h1 {
+          font-family: $font-Arabic;
+          &::before {
+            display: none;
+          }
+          &::after {
+            display: none;
+          }
+        }
+
+        .Conatct_form {
+          .Conatct_form_boxs {
+            .Conatct_form_box {
+              label {
+                font-family: $font-Arabic;
+              }
+              input,
+              textarea {
+                font-family: $font-Arabic;
+                &::placeholder {
+                  font-family: $font-Arabic;
+                }
+              }
+            }
+          }
+          .Conatct_form_action {
+            font-family: $font-Arabic;
+            button {
+              font-family: $font-Arabic;
+            }
+          }
+        }
+        @media screen and (max-width: 600px) {
+          padding-right: 0;
+        }
+      }
+      @media screen and (max-width: 1100px) {
+        padding-right: 0rem;
+        padding-left: 3rem;
+      }
+      @media screen and (max-width: 600px) {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+      }
+    }
+  }
+}
+
+// Image 2
+.Conatct_Image2 {
+  .Conatct_main {
+    .Conatct_main_wrapper {
+      padding: 0rem 3rem;
+      max-width: 1140px;
+      .Conatct_main_left_image {
+        flex: 1.5;
+        width: 100%;
+        height: 100%;
+        .Conatct_main_image {
+          position: relative;
+          height: 530px;
+          border-radius: 8px;
+          overflow: hidden;
+          img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+          }
+        }
+      }
+      .Conatct_main_right {
+        flex: 2.5;
+        @media screen and (max-width: 1100px) {
+          padding-left: 0rem;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        .Conatct_main_left_image {
+          .Conatct_main_image {
+            height: 400px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+@import "./mixin.scss";
+@import "./partials.scss";
+
+.AboutCounter {
+  width: 100%;
+  background-color: $black;
+  border-bottom: 1px solid rgba(225, 225, 225, 0.7);
+  overflow: hidden;
+  .AboutCounter_wrapper {
+    @include maxWidth;
+    .AboutCounter_boxs {
+      @include verticallycenter;
+      white-space: nowrap;
+      flex-wrap: wrap;
+      padding: 40px 0px;
+      gap: 40px;
+      .AboutCounter_box {
+        flex: 1;
+        flex-grow: 1;
+        flex-shrink: 0;
+        color: $white;
+
+        h1 {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 1.8rem;
+          line-height: 31px;
+          margin-bottom: 6px;
+        }
+        h5 {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1.15rem;
+          line-height: 29px;
+          font-family: $font-Light;
+          color: #ffffff;
+        }
+      }
+      .AboutCounter_box:nth-child(2),
+      .AboutCounter_box:nth-child(3) {
+        display: flex;
+        justify-content: center;
+        border-left: 1px solid #b7b7b7;
+        padding: 0px 10px;
+        @media screen and (max-width: 700px) {
+          border: none;
+          justify-content: flex-start;
+          padding: 0px;
+        }
+      }
+      .AboutCounter_box:nth-child(4) {
+        display: flex;
+        justify-content: flex-end;
+        border-left: 1px solid #b7b7b7;
+        padding-left: 10px;
+        @media screen and (max-width: 700px) {
+          border: none;
+          justify-content: flex-start;
+          padding: 0px;
+        }
+      }
+    }
+  }
+}
+
+// Arabic
+.AboutCounter_Arabic {
+  .AboutCounter_wrapper {
+    .AboutCounter_boxs {
+      gap: 40px;
+      .AboutCounter_box {
+        h5 {
+          font-family: $font-Arabic;
+        }
+      }
+      .AboutCounter_box:nth-child(2),
+      .AboutCounter_box:nth-child(3) {
+        border: none;
+        border-right: 1px solid #b7b7b7;
+        @media screen and (max-width: 700px) {
+          border: none;
+          padding: 0px;
+        }
+      }
+      .AboutCounter_box:nth-child(4) {
+        border: none;
+        border-right: 1px solid #b7b7b7;
+        @media screen and (max-width: 700px) {
+          border: none;
+          padding: 0px;
+        }
+      }
+    }
+  }
+}

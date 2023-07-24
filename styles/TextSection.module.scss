@@ -1,0 +1,44 @@
+@import "./mixin.scss";
+@import "./partials.scss";
+
+.TextSection {
+    padding: 4rem 0;
+
+    &.TextSection_dark {
+        background: $black;
+
+        .TextSection_wrapper {
+            h5 {
+                color: $gray;
+            }
+            h2 {
+                color: $white;
+            }
+            p {
+                color: #ddd;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 900px) {
+        padding: 2rem 0;
+    }
+    
+    .TextSection_wrapper {
+        @include maxWidth;
+
+        h5 {
+            font-size: 14px;
+            color: #7F7F7F;
+        }
+        h2 {
+            font-size: 32px;
+            margin-top: 5px;
+        }
+        p {
+            font-size: 14px;
+            margin-top: 10px;
+            line-height: 24px;
+        }
+    }
+}

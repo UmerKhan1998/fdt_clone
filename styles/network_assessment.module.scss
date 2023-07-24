@@ -1,0 +1,220 @@
+@import './mixin.scss';
+@import './partials.scss';
+
+.network_assessment {
+    padding: 4rem 0;
+    overflow: hidden;
+    background-color: $black;
+    border-top: 1px solid $white;
+
+    
+    .network_assessment_wrapper {
+        max-width: 1600px;
+        margin: auto;
+        
+        .network_assessment_title {
+            margin-bottom: 30px;
+            @include maxWidth;
+            color: $white;
+            h2 {
+                width: 50%;
+                font-size: 32px;
+                margin-bottom: 20px;
+                color: $white;
+
+                @media screen and (max-width: 600px) {
+                    width: 100%;
+                    font-size: 28px;
+                }
+                @media screen and (max-width: 400px) {
+                    font-size: 24px;
+                }
+            }
+            p {
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+        }
+        
+        .network_assessment_cols {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .network_assessment_left {
+            width: 45%;
+            
+            .network_assessment_left_border {
+                border: 1px solid $light-gray;
+                border-radius: 0 10px 10px 0;
+                border-left: 0;
+            }
+            
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .network_assessment_left_border > div:nth-child(1) {
+                padding: 25px 30px 10px 0;
+
+                img {
+                    height: 185px;
+                }
+            }
+            .network_assessment_left_border > div:nth-child(2) {
+                padding-right: 30px;
+
+                .network_assessment_left_quot {
+                    padding: 15px 40px;
+                    border: 1px solid $light-gray;
+                    border-radius: 10px;
+                    max-width: 530px;
+                    margin-left: auto;
+                    color: $white;
+                }
+
+                p {
+                    position: relative;
+                    
+                    font-size: 28px;
+
+                    span {
+                        color: $red;
+                    }
+
+                    .quatImg1 {
+                        position: absolute;
+                        width: 22px;
+                        top: 4px;
+                        left: -30px;
+                        object-fit: fill;
+                        opacity: 0.4;
+                    }
+                    .quatImg2 {
+                        width: 22px;
+                        bottom: 2px;
+                        margin-left: 10px;
+                        object-fit: fill;
+                        opacity: 0.4;
+                    }
+                }
+            }
+            .network_assessment_left_border > div:nth-child(3) {
+                padding: 10px 0 25px 30px;
+
+                img {
+                    height: 185px;
+                }
+            }
+
+            @media screen and (max-width: 900px) {
+                width: 100%;
+            }
+        }
+        .network_assessment_rigth {
+            width: 50%;
+            padding-left: 60px;
+
+            @media screen and (max-width: 900px) {
+                padding-left: 20px;
+                padding-top: 20px;
+            }
+
+            .network_assessment_rigth_text {
+                max-width: 600px;
+                padding-right: 20px;
+
+                @media screen and (max-width: 900px) {
+                    max-width: 100%;
+                }
+
+                h2 {
+                    font-size: 40px;
+                    color: $white;
+                    margin-bottom: 20px;
+
+                    @media screen and (max-width: 900px) {
+                        font-size: 32px;
+                    }
+                }
+                p {
+                    font-size: 14px;
+                    color: $white;
+                    line-height: 28px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .network_assessment_rigth_cards {
+                display: flex;
+                flex-wrap: wrap;
+
+                @media screen and (max-width: 900px) {
+                    padding-top: 20px;
+                }
+
+                .network_assessment_rigth_card {
+                    flex: 1;
+                    flex-shrink: 0;
+                    flex-basis: 50%;
+                    padding-inline: 10px;
+                    padding-bottom: 20px;
+                    
+                    @media screen and (max-width: 700px) {
+                        flex-basis: 100%;
+                        padding-inline: 0;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 900px) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.network_assessment_Arabic {
+    .network_assessment_wrapper {
+        .network_assessment_left {
+            .network_assessment_left_border {
+                border: 1px solid $light-gray;
+                border-radius: 10px 0 0 10px;
+                border-right: 0;
+            }
+
+            .network_assessment_left_border > div:nth-child(1) {
+                padding: 25px 0 10px 30px;
+            }
+            .network_assessment_left_border > div:nth-child(2) {
+                padding-right: unset;
+                padding-left: 30px;
+
+                .network_assessment_left_quot {
+                    margin-right: auto;
+                    margin-left: unset;
+                }
+                p {
+                    .quatImg2 {
+                        transform: rotateY(180deg);
+                        margin-left: unset;
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .network_assessment_left_border > div:nth-child(3) {
+                padding: 10px 30px 25px 0;
+            }
+        }
+        .network_assessment_rigth{
+            padding-left: 0;
+            padding-right: 60px;
+
+            @media screen and (max-width: 900px) {
+                padding-right: 20px;
+                padding-top: 20px;
+            }
+        }
+    }
+}

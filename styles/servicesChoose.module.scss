@@ -1,0 +1,105 @@
+@import "./mixin.scss";
+@import "./partials.scss";
+
+.ServicesChoose {
+  width: 100%;
+  padding: 60px 0px;
+  &.ServicesChoose_dark {
+    background-color: $black;
+    .ServicesChoose_wrapper{
+      .ServicesChoose_title {
+        h5 {
+          color: $light-gray
+        }
+        h2 {
+          color: $white;
+        }
+        p {
+          color: #D7D7D7;
+        }
+      }
+    }
+  }
+  .ServicesChoose_wrapper {
+    @include maxWidth;
+    .ServicesChoose_title {
+      width: 100%;
+      margin-bottom: 40px;
+      img {
+        margin-bottom: 10px;
+      }
+      h5 {
+        font-size: 1rem;
+        color: $light-black;
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 700;
+      }
+      h2 {
+        font-size: 2rem;
+        width: 50%;
+        color: $black;
+      }
+      p {
+        font-size: 0.9rem;
+        font-style: normal;
+        font-weight: 400;
+        color: #3e3e3e;
+        margin: 16px 0px;
+      }
+    }
+    .ServicesChoose_boxs {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      > div {
+        flex: 1 1 33.33%;
+        padding: 0px 10px 20px 10px;
+        
+        @media screen and (max-width: 900px) {
+          flex: 0 1 50%;
+          padding: 0px 5px 20px 5px;
+        }
+        @media screen and (max-width: 600px) {
+          flex: 1 1 100%;
+        }
+      }
+    }
+    @media screen and (max-width: 900px) {
+      .ServicesChoose_title {
+        h5 {
+          font-size: 0.8rem;
+        }
+        h2 {
+          font-size: 1.7rem;
+          width: 70%;
+        }
+      }
+    }
+    @media screen and (max-width: 500px) {
+      .ServicesChoose_title {
+        h5 {
+          font-size: 0.8rem;
+        }
+        h2 {
+          font-size: 1.5rem;
+          width: 80%;
+        }
+        p {
+          font-size: 0.8rem;
+        }
+      }
+    }
+    @media screen and (max-width: 400px) {
+      .ServicesChoose_title {
+        h2 {
+          font-size: 1.3rem;
+          width: 90%;
+        }
+        p {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+}

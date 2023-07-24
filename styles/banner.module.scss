@@ -1,0 +1,145 @@
+@import "./mixin.scss";
+@import "./partials.scss";
+
+.banner {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: $black;
+
+  .banner_wrapper {
+    @include maxWidth;
+    padding-top: 130px;
+    padding-bottom: 100px;
+    @include allCenter;
+    // min-height: 400px;
+
+    @media screen and (max-width: 700px) {
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+    .banner_content {
+      @include allCenter;
+      flex-direction: column;
+      text-align: center;
+      
+      .banner_logo {
+        margin-bottom: 15px;
+      }
+
+      .banner_logo_right {
+        position: absolute;
+        right: -60px;
+        bottom: -60px;
+        display: inline-block;
+        object-fit: contain;
+        z-index: 10;
+      }
+
+      h1 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.6rem;
+        line-height: 50px;
+        
+        color: #ffffff;
+        width: 60%;
+        margin-bottom: 10px;
+        @media screen and (max-width: 800px) {
+          width: 100% !important;
+        }
+      }
+      h3 {
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 34px;
+        text-align: center;
+        color: #ffffff;
+        margin-bottom: 10px;
+        font-family: $font-Semibold;
+      }
+      p {
+        width: 70%;
+        font-family: $font-Light;
+        font-weight: 500;
+        font-size: 0.9rem;
+        line-height: 22px;
+        color: #ffffff;
+      }
+      @media screen and (max-width: 800px) {
+        h1 {
+          font-size: 2.3rem;
+          width: 90%;
+          line-height: 40px;
+        }
+        h3 {
+          font-size: 1.2rem;
+          line-height: 30px;
+        }
+        p {
+          width: 90%;
+          font-size: 0.85rem;
+        }
+      }
+
+      @media screen and (max-width: 550px) {
+        h1 {
+          font-size: 1.7rem;
+          width: 100%;
+        }
+        h3 {
+          font-size: 1rem;
+        }
+        p {
+          width: 100%;
+          font-size: 0.8rem;
+        }
+      }
+      @media screen and (max-width: 400px) {
+        h1 {
+          font-size: 1.5rem;
+          line-height: normal;
+        }
+        h3 {
+          font-size: 0.9rem;
+          line-height: normal;
+        }
+        p {
+          width: 100%;
+          font-size: 0.8rem;
+        }
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 864px;
+      height: 864px;
+      left: -400px;
+      top: -250px;
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        #ef0303 0%,
+        rgba(239, 3, 3, 0) 100%
+      );
+      opacity: 0.15;
+      pointer-events: none;
+    }
+  }
+}
+// Arabic
+.banner_Arabic {
+  .banner_wrapper {
+    .banner_content {
+      h1 {
+        font-family: $font-Arabic;
+      }
+      p {
+        font-family: $font-Arabic;
+      }
+    }
+  }
+}

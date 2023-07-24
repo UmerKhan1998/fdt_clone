@@ -1,0 +1,41 @@
+@import './mixin.scss';
+@import './partials.scss';
+
+.business_benefits {
+    padding: 4rem 0;
+
+    .business_benefits_wrapper {
+        @include maxWidth;
+
+        .business_benefits_title {
+            h2 {
+                font-size: 32px;
+                width: 70%;
+                margin-bottom: 40px;
+                color: $black;
+                
+                @media screen and (max-width: 900px) {
+                    width: 100%;
+                }
+            }
+        }
+        .business_benefits_cols {
+            display: flex;
+            flex-wrap: wrap;
+            margin-inline: -15px;
+            
+            .business_benefits_col {
+                padding-inline: 10px;
+                padding-bottom: 20px;
+                width: 33.33%;
+
+                @media screen and (max-width: 900px) {
+                    width: 50%;
+                }
+                @media screen and (max-width:700px) {
+                    width: 100%;
+                }
+            }
+        }
+    }    
+}

@@ -1,0 +1,188 @@
+@import './mixin.scss';
+@import './partials.scss';
+
+.our_experts {
+    padding: 2rem 0;
+    
+    .our_experts_wrapper {
+        @include maxWidth;
+
+        .our_experts_title {
+
+            span {
+                font-size: 16px;
+                color: $light-black;
+                display: block;
+                margin-bottom: 5px;
+            }
+            h2 {
+                font-size: 32px;
+                width: 50%;
+                margin-bottom: 40px;
+                color: $black;
+                
+                @media screen and (max-width: 900px) {
+                    width: 100%;
+                }
+                @media screen and (max-width: 600px) {
+                    font-size: 28px;
+                    margin-bottom: 30px;
+                }
+                @media screen and (max-width: 400px) {
+                    font-size: 24px;
+                    line-height: 28px;
+                }
+            }
+        }
+
+        .our_experts_cols {
+            display: flex;
+            flex-wrap: wrap;
+
+            > div:nth-child(1) {
+                width: 40%;
+                padding-right: 40px;
+
+                .our_experts_list {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+
+                    li {
+
+                        > a {
+                            position: relative;
+                            padding: 20px 0;
+                            display: flex;
+                            align-items: center;
+                            color: inherit;
+                            text-decoration: none;
+                        }
+                        
+                        border-bottom: 1px solid $light-gray;
+
+                        a::before {
+                            content: '';
+                            position: absolute;
+                            bottom: -1px;
+                            right: 0;
+                            width: 0;
+                            height: 2px;
+                            background: $red;
+                            transition: all .8s ease;
+                        }
+                        a:hover::before {
+                            left: 0;
+                            width: 100%;
+                        }
+
+                        .our_experts_list_count {
+                            width: 40px;
+                            height: 40px;
+                            display: inline-flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 100%;
+                            border: 1px solid #c4c4c4;
+                            margin-right: 20px;
+
+                            > span {
+                                width: 30px;
+                                height: 30px;
+                                display: inline-flex;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 100%;
+                                font-size: 14px;
+                                font-weight: 600;
+                                line-height: 0;
+                                box-shadow: 4px 4px 6px 0px #0000000F;
+                            }
+                        }
+                        .our_experts_list_text {
+                            flex: 1;
+                            font-size: 16px;
+                            font-weight: 600;
+                        }
+                        .our_experts_list_icon {
+                            img {
+                                transform: rotate(45deg);
+                            }
+                        }
+                    }
+                }
+                .our_experts_link {
+                    @include button(12px 25px, 8px);
+                    color: $white;
+                    background: $black;
+                    font-size: 14px;
+                    margin-top: 40px;
+                }
+            }
+            > div:nth-child(2) {
+                width: 60%;
+                padding-left: 30px;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            @media screen and (max-width: 900px) {
+                > div:nth-child(1) {
+                    width: 100%;
+                    padding: 0;
+                    order: 2;
+                }
+                > div:nth-child(2) {
+                    width: 100%;
+                    padding: 0;
+                    order: 1;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.our_experts_Arabic {
+    .our_experts_wrapper{
+        .our_experts_cols{
+            > div:nth-child(1) {
+                padding-right: unset;
+                padding-left: 40px;
+                
+                .our_experts_list {
+                    li {
+                        .our_experts_list_count {
+                            margin-right: unset;
+                            margin-left: 20px;
+                        }
+                        .our_experts_list_icon {
+                            img {
+                                transform: rotate(225deg);
+                            }
+                        }
+                    }
+                }
+            }
+            > div:nth-child(2) {
+                padding-left: unset;
+                padding-right: 30px;
+            }
+            @media screen and (max-width: 900px) {
+                > div:nth-child(1) {
+                    padding: 0;
+                }
+                > div:nth-child(2) {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}

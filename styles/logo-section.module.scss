@@ -1,0 +1,22 @@
+@import "./mixin.scss";
+@import "./partials.scss";
+
+.LogoSection {
+    padding: 0 0 4rem 0;
+
+    @media screen and (max-width: 900px) {
+        padding: 2rem 0;
+    }
+    
+    .LogoSection_wrapper {
+        @include maxWidth;
+        text-align: center;
+
+        .img {
+            position: relative;
+            max-width: 388px;
+            height: 320px;
+            margin: 0 auto;
+        }
+    }
+}

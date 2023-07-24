@@ -1,0 +1,27 @@
+@import './mixin.scss';
+@import './partials.scss';
+
+.business_benefits_card {
+    padding: 15px;
+    border: 1px solid $light-black;
+    border-radius: 10px;
+    height: 100%;
+    
+    h5 {
+        display: inline-block;
+        font-size: 16px;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 36px;
+        color: $red;
+        border: 1px solid $red;
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+    p {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+}

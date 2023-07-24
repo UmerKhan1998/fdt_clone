@@ -1,0 +1,90 @@
+@import "./mixin.scss";
+@import "./partials.scss";
+
+.Industrie {
+  width: 100%;
+  padding: 60px 0px;
+  .Industrie_wrapper {
+    @include maxWidth;
+    .Industrie_title {
+      width: 100%;
+      margin-bottom: 40px;
+      h5 {
+        font-size: 14px;
+        color: $gray;
+        display: block;
+        font-weight: 700;
+      }
+      h2 {
+        font-size: 2rem;
+        width: 80%;
+        color: $black;
+      }
+      .desc1 {
+        width: 80%;
+        font-size: 14px;
+        margin-top: 10px;
+        line-height: 24px
+      }
+      @media screen and (max-width: 900px) {
+        h2 {
+          width: 100%;
+        }
+        p {
+          width: 100%;
+        }
+      }
+    }
+    .desc2 {
+      font-size: 14px;
+      margin-top: 10px;
+      line-height: 24px
+    }
+    .Industrie_boxs {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      > div {
+        width: 32%;
+        padding: 0px 5px 20px 5px;
+
+        @media screen and (max-width: 900px) {
+          width: 50%;
+        }
+        @media screen and (max-width: 600px) {
+          width: 100%;
+          padding:10px 0px;
+        }
+      }
+    }
+    @media screen and (max-width: 900px) {
+      .Industrie_title {
+        h5 {
+          font-size: 0.8rem;
+        }
+        h2 {
+          font-size: 1.7rem;
+          width: 90%;
+        }
+      }
+    }
+    @media screen and (max-width: 500px) {
+      .Industrie_title {
+        h5 {
+          font-size: 0.8rem;
+        }
+        h2 {
+          font-size: 1.5rem;
+          width: 100%;
+        }
+      }
+    }
+    @media screen and (max-width: 400px) {
+      .Industrie_title {
+        h2 {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,205 @@
+@import "./mixin.scss";
+@import "./partials.scss";
+
+.AboutProject {
+  width: 100%;
+  .AboutProject_title {
+    width: 100%;
+    padding: 60px 0px;
+    .AboutProject_title_wrapper {
+      @include maxWidth;
+      h5 {
+        font-size: 1rem;
+        color: $light-black;
+        display: block;
+        margin-bottom: 5px;
+      }
+      h2 {
+        font-size: 2rem;
+        width: 50%;
+        color: $black;
+      }
+      @media screen and (max-width: 900px) {
+        h5 {
+          font-size: 0.8rem;
+        }
+        h2 {
+          font-size: 1.7rem;
+          width: 70%;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        h5 {
+          font-size: 0.8rem;
+        }
+        h2 {
+          font-size: 1.5rem;
+          width: 80%;
+        }
+      }
+      @media screen and (max-width: 400px) {
+        h2 {
+          font-size: 1.3rem;
+          width: 90%;
+        }
+      }
+    }
+  }
+  .AboutProject_main {
+    width: 100%;
+    padding-bottom: 100px;
+    .AboutProject_main_wrapper {
+      @include maxWidth;
+      max-width: 1480px;
+      padding-left: 0px;
+      padding-right: 12rem;
+      display: flex;
+      align-items: flex-start;
+      .AboutProject_main_left {
+        flex: 2;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(5, 1fr);
+        .AboutProject_main_image {
+          position: relative;
+          background-color: black;
+          height: 170px;
+          img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+          }
+        }
+        .AboutProject_main_image:nth-child(1) {
+          grid-column-start: 1;
+          grid-column-end: 4;
+        }
+        .AboutProject_main_image:nth-child(2) {
+          grid-column-start: 4;
+          grid-column-end: 6;
+        }
+        .AboutProject_main_image:nth-child(3) {
+          grid-column-start: 1;
+          grid-column-end: 6;
+          height: 130px;
+        }
+        .AboutProject_main_image:nth-child(4) {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          height: 150px;
+        }
+        .AboutProject_main_image:nth-child(5) {
+          grid-column-start: 3;
+          grid-column-end: 6;
+          height: 150px;
+        }
+      }
+      .AboutProject_main_right {
+        width: 100%;
+        flex: 2;
+        padding-left: 3rem;
+        h1 {
+          position: relative;
+          width: 65%;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 1.7rem;
+          line-height: 40px;
+          
+          color: $black;
+          margin-bottom: 30px;
+          padding-left: 30px;
+          font-family: $font-Semibold;
+          span {
+            color: $red;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            background-image: url(../assets/images/quot1.svg);
+            background-repeat: no-repeat;
+            width: 30px;
+            height: 30px;
+            @include allCenter;
+            top: 10px;
+            left: -5px;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            background-image: url(../assets/images/quot2.svg);
+            background-repeat: no-repeat;
+            width: 30px;
+            height: 30px;
+            @include allCenter;
+            bottom: 0;
+            right: 10px;
+          }
+        }
+        p {
+          font-weight: 400;
+          font-size: 1rem;
+          line-height: 28px;
+          color: $black;
+          margin-bottom: 12px;
+        }
+        @media screen and (max-width: 600px) {
+          padding-left: 0px;
+          h1 {
+            width: 80%;
+            font-size: 1.5rem;
+          }
+          p {
+            font-size: 0.9rem;
+          }
+        }
+      }
+      @media screen and (max-width: 1100px) {
+        flex-direction: column;
+        gap: 60px;
+        padding-right: 3rem;
+      }
+      @media screen and (max-width: 600px) {
+        padding-right: 1.5rem;
+      }
+    }
+  }
+}
+
+.AboutProject_Arabic {
+  .AboutProject_main {
+    .AboutProject_main_wrapper {
+      padding-left: 12px;
+      padding-right: 0rem;
+      .AboutProject_main_right {
+        padding-left: 0;
+        padding-right: 3rem;
+        h1 {
+          font-family: $font-Arabic;
+          &::before {
+            display: none;
+          }
+          &::after {
+            display: none;
+          }
+        }
+        @media screen and (max-width: 600px) {
+          padding-right: 0;
+        }
+      }
+      @media screen and (max-width: 1100px) {
+        padding-right: 0rem;
+        padding-left: 3rem;
+      }
+      @media screen and (max-width: 600px) {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+      }
+    }
+  }
+}

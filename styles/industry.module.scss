@@ -1,0 +1,69 @@
+@import "./mixin.scss";
+@import "./partials.scss";
+
+.industry {
+    padding: 3rem 0;
+    background-color: $black;
+
+    @media screen and (max-width: 700px) {
+        padding: 2rem 0;
+    }
+
+    .industry_wrapper {
+        @include maxWidth;
+
+        .industry_title {
+            // text-align: center;
+
+            span {
+                font-size: 16px;
+                font-weight: 600;
+                color: $gray;
+                display: block;
+                margin-bottom: 5px;
+            }
+            h2 {
+                font-size: 32px;
+                margin-bottom: 40px;
+                color: $white;
+
+                @media screen and (max-width: 600px) {
+                    font-size: 28px;
+                    margin-bottom: 30px;
+                }
+                @media screen and (max-width: 400px) {
+                    font-size: 24px;
+                    line-height: 28px;
+                }
+            }
+        }
+        .industry_cols {
+            display: flex;
+            flex-wrap: wrap;
+
+            > div {
+                width: 33.33%;
+                padding: 0 10px 20px 10px;
+
+                @media screen and (max-width: 900px) {
+                    width: 50%;
+                }
+                @media screen and (max-width: 600px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.industry_Arabic {
+    .industry_wrapper {
+        .industry_cols {
+            a {
+                img {
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+    }
+}

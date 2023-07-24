@@ -1,0 +1,261 @@
+@import './mixin.scss';
+@import './partials.scss';
+
+.proven_process {
+    padding: 3rem 0;
+
+    .proven_process_wrapper {
+        @include maxWidth();
+
+
+        .proven_process_title {
+
+            h5 {
+                font-size: 16px;
+                color: $light-black;
+                display: block;
+                margin-bottom: 5px;
+                font-weight: 500;
+            }
+            h2 {
+                font-size: 32px;
+                width: 60%;
+                margin-bottom: 40px;
+                color: $black;
+                
+                @media screen and (max-width: 900px) {
+                    width: 100%;
+                }
+                @media screen and (max-width: 600px) {
+                    font-size: 28px;
+                    margin-bottom: 30px;
+                }
+                @media screen and (max-width: 400px) {
+                    font-size: 24px;
+                }
+            }
+        }
+        .proven_process_cols {
+            display: flex;
+            flex-wrap: wrap;
+
+            .proven_process_col {
+                width: 25%;
+
+                @media screen and (max-width: 700px) {
+                    width: 100%;
+                    
+                    &:last-child {
+                        .proven_process_arrowbox {
+                            display: none;
+                        }
+                    }
+                }
+
+
+                .proven_process_card {
+                    
+                    .proven_process_cardbox {
+                        min-height: 175px;
+                        border: 1px solid $black;
+                        border-radius: 10px;
+                        padding: 15px;
+                        
+                        h3 {
+                            font-size: 18px;
+                            color: $black;
+                            margin-bottom: 12px;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        p {
+                            font-size: 14px;
+                            color: $light-black;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 6;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                }
+                .proven_process_arrowbox {
+                    position: relative;
+                    overflow: hidden;
+                    height: 200px;
+
+                    @media screen and (max-width: 700px) {
+                        height: 60px;
+                    }
+
+                    &:nth-child(even) .proven_process_arrows {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: -50%;
+                        right: -50%;
+                        border:  1px solid $black;
+                        border-radius: 10px;
+
+                        &::before {
+                            position: absolute;
+                            content: '';
+                            width: 10px;
+                            height: 10px;
+                            top: 75%;
+                            left: -5px;
+                            transform: translateY(-75%) rotate(135deg);
+                            border-top: 1px solid $red;
+                            border-right: 1px solid $red;
+                        }
+
+                        &::after {
+                            position: absolute;
+                            content: '';
+                            width: 10px;
+                            height: 10px;
+                            right: 75%;
+                            bottom: -14px;
+                            transform: translateY(-75%) rotate(45deg);
+                            border-top: 1px solid $red;
+                            border-right: 1px solid $red;
+                        }
+                        @media screen and (max-width: 700px) {
+                            top: -10px;
+                            height: calc(100% + 20px);
+
+                            &::before {
+                                top: 50%;
+                            }
+                        }
+                    }
+                    &:nth-child(odd) .proven_process_arrows {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        bottom: -50%;
+                        right: -50%;
+                        border:  1px solid $black;
+                        border-radius: 10px;
+
+                        &::before {
+                            position: absolute;
+                            content: '';
+                            width: 10px;
+                            height: 10px;
+                            left: 25%;
+                            top: -5px;
+                            transform: translateX(-25%) rotate(45deg);
+                            border-top: 1px solid $red;
+                            border-right: 1px solid $red;
+                        }
+
+                        &::after {
+                            position: absolute;
+                            content: '';
+                            width: 10px;
+                            height: 10px;
+                            top: 25%;
+                            left: -5px;
+                            transform: translateY(-75%) rotate(-45deg);
+                            border-top: 1px solid $red;
+                            border-right: 1px solid $red;
+                        }
+                        @media screen and (max-width: 700px) {
+                            top: -10px;
+                            height: calc(100% + 20px);
+
+                            &::after {
+                                top: 50%;
+                                transform: translateY(-75%) rotate(136deg);
+                            }
+                        }
+                    }
+                }
+
+                @media screen and (max-width: 700px) {
+                    display: flex;
+                    flex-direction: column;
+
+                    &:nth-child(even) .proven_process_card {
+                        order: 1;
+                    }
+                    &:nth-child(even) .proven_process_arrowbox {
+                        order: 2;
+                    }
+                    &:nth-child(odd) .proven_process_card {
+                        order: 1;
+                    }
+                    &:nth-child(odd) .proven_process_arrowbox {
+                        order: 2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.proven_process_Arabic {
+    .proven_process_wrapper {
+        .proven_process_cols {
+            .proven_process_col {
+                .proven_process_arrowbox {
+                    &:nth-child(even) .proven_process_arrows {
+                        top: -50%;
+                        right: unset;
+                        left: -50%;
+
+                        &::before {
+                            top: 75%;
+                            left: unset;
+                            right: -5px;
+                            transform: translateY(-75%) rotate(135deg);
+                        }
+                        &::after {
+                            right: unset;
+                            left: 75%;
+                            bottom: -14px;
+                            transform: translateY(-75%) rotate(220deg);
+                        }
+                        @media screen and (max-width: 700px) {
+                            top: -10px;
+                            height: calc(100% + 20px);
+
+                            &::before {
+                                top: 50%;
+                            }
+                        }
+                    }
+                    &:nth-child(odd) .proven_process_arrows {
+                        bottom: -50%;
+                        right: unset;
+                        left: -50%;
+
+                        &::before {
+                            right: 25%;
+                            top: -5px;
+                            transform: translateX(-25%) rotate(220deg);
+                        }
+                        &::after {
+                            top: 25%;
+                            right: -5px;
+                            transform: translateY(-75%) rotate(-45deg);
+                        }
+                        @media screen and (max-width: 700px) {
+                            top: -10px;
+                            height: calc(100% + 20px);
+
+                            &::after {
+                                top: 50%;
+                                transform: translateY(-75%) rotate(136deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

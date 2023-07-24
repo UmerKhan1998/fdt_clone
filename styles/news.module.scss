@@ -1,0 +1,74 @@
+@import "./mixin.scss";
+@import "./partials.scss";
+
+.news {
+  padding: 3rem 0;
+
+  @media screen and (max-width: 700px) {
+    padding: 2rem 0;
+  }
+
+  .news_wrapper {
+    @include maxWidth;
+
+    .news_title {
+      margin-bottom: 50px;
+
+      p {
+        font-size: 16px;
+        color: $light-black;
+        margin-bottom: 5px;
+      }
+      h2 {
+        font-size: 32px;
+        color: $black;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (max-width: 600px) {
+          font-size: 28px;
+          margin-bottom: 30px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 15px;
+        }
+        @media screen and (max-width: 400px) {
+          font-size: 24px;
+        }
+
+        > span {
+          flex: 1;
+        }
+
+        a {
+          @include button(10px 18px, 6px);
+          border: 1px solid $black;
+          white-space: nowrap;
+          &:hover{
+            background-color: $black;
+            color: $white;
+          }
+        }
+      }
+    }
+    .news_cols {
+      display: flex;
+      flex-wrap: wrap;
+
+      .news_col {
+        width: 33.33%;
+        padding-inline: 10px;
+        padding-bottom: 20px;
+
+        @media screen and (max-width: 900px) {
+          width: 50%;
+        }
+        @media screen and (max-width: 700px) {
+          width: 100%;
+          padding-inline: 0px;
+        }
+      }
+    }
+  }
+}

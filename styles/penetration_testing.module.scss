@@ -1,0 +1,147 @@
+@import './mixin.scss';
+@import './partials.scss';
+
+.penetration_testing {
+    padding: 4rem 0;
+    overflow: hidden;
+
+    .penetration_testing_wrapper {
+        @include maxWidth();
+
+        .penetration_testing_cols {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            .penetration_testing_col_left {
+                flex: 2;
+                
+                display: flex;
+                flex-direction: column;
+
+                @media screen and (max-width: 900px) {
+                    flex: unset;
+                }
+                
+                h5 {
+                    font-size: 16px;
+                    color: $gray;
+                    display: block;
+                    margin-bottom: 5px;
+                    font-weight: 400;
+                }
+                h2 {
+                    font-size: 32px;
+                    margin-bottom: 20px;
+                    color: $black;
+
+                    @media screen and (max-width: 600px) {
+                        font-size: 28px;
+                        margin-bottom: 30px;
+                    }
+                    @media screen and (max-width: 400px) {
+                        font-size: 24px;
+                    }
+                }
+                p {
+                    font-size: 14px;
+                    color: #3E3E3E;
+                    margin-bottom: 30px;
+                    line-height: 22px;
+                }
+                .penetration_testing_left_img {
+                    position: relative;
+                    margin-bottom: 30px;
+
+                    @media screen and (max-width: 900px) {
+                        height: 280px;
+                        flex: unset;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    img {
+                        position: relative;
+                        display: block;
+                        width: calc(100% + 100px);
+                        left: -100px;
+                        max-height: 100%;
+                        height: auto;
+                    }
+                }
+            }
+            .penetration_testing_col_right {
+                flex: 4;
+
+                @media screen and (max-width: 900px) {
+                    flex: unset;
+                }
+
+                .penetration_testing_cards {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    @media screen and (max-width: 900px) {
+                        padding-top: 20px;
+                    }
+
+                    .penetration_testing_card {
+                        flex: 0 1;
+                        flex-shrink: 0;
+                        flex-basis: 50%;
+                        padding-inline: 10px;
+                        padding-bottom: 20px;
+                        
+                        @media screen and (max-width: 700px) {
+                            flex-basis: 100%;
+                            padding-inline: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.penetration_testing_Dark {
+    background-color: $black;
+    .penetration_testing_wrapper {
+        .penetration_testing_cols {
+            .penetration_testing_col_left {
+                h2 {
+                    color: $white;
+                }
+                p {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.penetration_testing_Arabic {
+    .penetration_testing_wrapper {
+        .penetration_testing_cols {
+            .penetration_testing_col_left {
+                .penetration_testing_left_img {
+                    img {
+                        right: -100px;
+                    }
+                }
+            }
+            .penetration_testing_col_right {
+                .penetration_testing_cards {
+                    .penetration_testing_card {
+                        a {
+                            img {
+                                transform: rotateY(180deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

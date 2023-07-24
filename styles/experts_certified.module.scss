@@ -1,0 +1,223 @@
+@import "./mixin.scss";
+@import "./partials.scss";
+
+.experts_certified {
+    overflow: hidden;
+    padding: 3rem 0 7rem 0;
+
+    @media screen and (max-width: 900px) {
+        padding: 2rem 0;
+    }
+
+    .experts_certified_wrapper {
+        @include maxWidth;
+
+        .experts_certified_title {
+
+            span {
+                font-size: 16px;
+                color: $light-black;
+                display: block;
+                margin-bottom: 5px;
+            }
+            h2 {
+                font-size: 32px;
+                line-height: 36px;
+                // width: 50%;
+                margin-bottom: 80px;
+                color: $black;
+                
+                @media screen and (max-width: 900px) {
+                    // width: 100%;
+                    margin-bottom: 40px;
+                }
+                @media screen and (max-width: 600px) {
+                    font-size: 28px;
+                    margin-bottom: 30px;
+                }
+                @media screen and (max-width: 400px) {
+                    font-size: 24px;
+                    line-height: 28px;
+                }
+            }
+        }
+        .experts_certified_cols {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -40px;
+                left: -50px;
+                width: 10000%;
+                height: calc(100% + 80px);
+                border: 2px solid $light-black;
+                border-radius: 10px;
+                pointer-events: none;
+
+                @media screen and (max-width: 900px) {
+                    display: none;
+                }
+            }
+
+            > div:nth-child(1) {
+                width: 40%;
+
+                img {
+                    width: 100%;
+                }
+            }
+            > div:nth-child(2) {
+                width: 15%;
+                padding-left: 20px;
+
+                .experts_certified_list_tabs {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    border-left: 1px solid #c4c4c4;
+                    padding-left: 20px;
+                    
+                    li {
+                        position: relative;
+                        margin-bottom: 20px;
+                        color: $light-gray;
+                        cursor: pointer;
+
+                        &.experts_certified_list_tabs_active {
+                            color: $black;
+                            font-weight: 600;
+
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                left: -23px;
+                                width: 5px;
+                                height: 13px;
+                                border-radius: 2px;
+                                background-color: $red;
+                            }
+                        }
+                    }
+                    @media screen and (max-width: 900px) {
+                        display: flex;
+                        border-left: 0;
+                        padding-left: 0;
+                        padding-top: 15px;
+                        border-top: 1px solid #c4c4c4;
+                        margin-bottom: 20px;
+
+                        li {
+                            margin-bottom: 0;
+                            margin-right: 20px;
+
+                            &.experts_certified_list_tabs_active {
+
+                                &::before {
+                                    top: -18px;
+                                    left: 0;
+                                    transform: translateY(0);
+                                    width: 18px;
+                                    height: 5px;
+                                    border-radius: 2px;
+                                    background-color: $red;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                @media screen and (max-width: 900px) {
+                    padding-left: 0;
+                }
+            }
+            > div:nth-child(3) {
+                width: 45%;
+                max-height: 357px;
+                overflow: auto;
+
+                &::-webkit-scrollbar {
+                    width: 8px;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: $red;
+                    border-radius: 4px;
+                }
+
+                p {
+                    font-size: 14px;
+                    line-height: 22px;
+                    padding-right: 8px;
+                }
+            }
+
+            @media screen and (max-width: 900px) {
+                > div:nth-child(1),
+                > div:nth-child(2),
+                > div:nth-child(3) {
+                    width: 100%;
+                }
+
+                > div:nth-child(1) {
+                    order: 2;
+                }
+                > div:nth-child(2) {
+                    order: 1;
+                }
+                > div:nth-child(3) {
+                    order: 3;
+                }
+
+                > div:nth-child(1) {
+                    text-align: center;
+                    img {
+                        width: auto;
+                        max-width: 100%;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.experts_certified_Arabic {
+    .experts_certified_wrapper {
+        .experts_certified_cols {
+            > div:nth-child(2) {
+                .experts_certified_list_tabs {
+                    border-left: 0;
+                    padding-left: 0;
+                    border-right: 1px solid #c4c4c4;
+                    padding-right: 20px;
+
+                    @media screen and (max-width: 900px) {
+                        border-right: 0;
+                        padding-right: 0;
+                        padding-left: 20px;
+                    }
+                    li {
+                        @media screen and (max-width: 900px) {
+                            margin-right: unset;
+                            margin-left: 20px;
+                        }
+                        &.experts_certified_list_tabs_active {
+                            &::before {
+                                left: 0;
+                                right: -23px;
+
+                                @media screen and (max-width: 900px) {
+                                    right: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

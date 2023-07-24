@@ -1,0 +1,207 @@
+@import "./mixin.scss";
+@import "./partials.scss";
+
+.BlogsGridContainer {
+  @include maxWidth;
+  padding-block: 50px;
+
+  .pagination_row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    margin-top: 15px;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    .pagination_box {
+      border: 1px solid #191919;
+      padding: 10px 15px;
+      // width: 59px;
+      // height: 59px;
+      border-radius: 10px;
+      height: 40px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        background: #000;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+
+    .active {
+      border: 1px solid #191919;
+      padding: 10px 15px;
+      // width: 59px;
+      // height: 59px;
+      border-radius: 10px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background: #000;
+      color: #fff;
+      &:hover {
+        cursor: pointer;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+
+    .next_pagination_box {
+      border: 1px solid #191919;
+      padding: 10px 14px;
+      // width: 59px;
+      // height: 59px;
+      border-radius: 10px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        background: #000;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+
+    .col1 {
+      //   background-color: red;
+      flex: 0 0 calc(30% - 15px);
+      .input {
+        @include input(15px);
+        width: 100%;
+        border-radius: 5px;
+        position: relative;
+        border: 1px solid #bbbbbb;
+      }
+      .input_div {
+        position: relative;
+        svg {
+          position: absolute;
+          /* left: 505px; */
+          top: 50%;
+          font-size: 20px;
+          transform: translateY(-50%);
+          right: 10px;
+        }
+      }
+
+      .side_panel {
+        border: 1px solid #bbbbbb;
+        padding: 25px 15px 5px;
+        border-radius: 5px;
+        margin-top: 20px;
+        .bold {
+          font-weight: 600;
+          // font-size: 20px;
+        }
+        .mt15 {
+          margin-top: 15px;
+        }
+        .securityP {
+          padding-block: 15px;
+          border-bottom: 1px solid #bbbbbb;
+          &:nth-last-child(1) {
+            border-bottom: none;
+          }
+        }
+
+        .row_side_panel {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 15px;
+          .col_content_blogs {
+            flex: 0 0 calc(10% - 15px);
+            .blogs_counts {
+              font-size: 36px;
+              color: #535353;
+              font-weight: 700;
+            }
+          }
+          .col_detail_blogs {
+            flex: 0 0 calc(90% - 15px);
+          }
+          .col_detail1 {
+            flex: 0 0 calc(40% - 15px);
+            p {
+              font-size: 12px;
+              margin-block: 12px;
+            }
+          }
+          .col_detail2 {
+            flex: 0 0 calc(60% - 15px);
+            p {
+              font-size: 12px;
+              margin-block: 12px;
+            }
+          }
+        }
+      }
+    }
+    .col2 {
+      flex: 0 0 calc(70% - 0px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .news_blog_col {
+      flex: 0 0 calc(50% - 15px);
+    }
+
+    @media (max-width: 900px) {
+      .news_blog_col {
+        flex: 0 0 calc(50% - 8px);
+      }
+      .col1 {
+        flex: 0 0 calc(100% - 0px);
+      }
+      .col2 {
+        flex: 0 0 calc(100% - 0px);
+      }
+    }
+
+    @media (max-width: 650px) {
+      .news_blog_col {
+        flex: 0 0 calc(100% - 0px);
+      }
+    }
+  }
+}
+
+.BlogsGridContainer_Arabic {
+  .row {
+    .col1 {
+      .input_div {
+        input::placeholder {
+          font-family: $font-Arabic;
+        }
+        svg {
+          right: unset;
+          left: 10px;
+        }
+      }
+    }
+  }
+}

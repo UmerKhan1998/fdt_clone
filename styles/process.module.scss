@@ -1,0 +1,111 @@
+@import "./mixin.scss";
+@import "./partials.scss";
+
+.process {
+    padding: 4rem 0;
+    overflow: hidden;
+    background-color: $black;
+
+    @media screen and (max-width: 700px) {
+        padding: 2rem 0;
+    }
+
+    .process_wrapper {
+        @include maxWidth;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        
+        @media screen and (max-width: 900px) {
+            flex-direction: column;
+        }
+
+        .process_left {
+            flex: 1;
+
+            h2 {
+                font-size: 32px;
+                color: $white;
+                margin-bottom: 40px;
+                
+                
+                @media screen and (max-width: 600px) {
+                    font-size: 28px;
+                    margin-bottom: 30px;
+                }
+                @media screen and (max-width: 400px) {
+                    font-size: 24px;
+                }
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+                color: $white;
+                list-style: none;
+
+                li {
+                    position: relative;
+                    padding-left: 35px;
+                    padding-bottom: 30px;
+                    border-left: 2px solid $white;
+                    
+                    &:last-child {
+                        border-color: transparent;
+                    }
+
+                    h5 {
+                        position: absolute;
+                        left: -18px;
+                        display: block;
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 100%;
+                        background-color: $white;
+                        color: $black;
+                        text-align: center;
+                        line-height: 36px;
+                        font-size: 18px;
+                    }
+                    h3 {
+                        font-size: 26px;
+                        margin-bottom: 10px;
+                        font-weight: 500;
+                    }
+                    p {
+                        color: $white;
+                        font-size: 12px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+        .process_right {
+            flex: 1;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+.process_Arabic {
+    .process_wrapper {
+        .process_left {
+            ul {
+                li {
+                    padding-left: 0;
+                    border-left: 0;
+                    padding-right: 35px;
+                    border-right: 2px solid $white;
+
+                    h5 {
+                        left: unset;
+                        right: -18px;
+                    }
+                }
+            }
+        }
+    }
+}

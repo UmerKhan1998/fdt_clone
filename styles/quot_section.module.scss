@@ -1,0 +1,161 @@
+@import './mixin.scss';
+@import './partials.scss';
+
+.quot_section {
+    position: relative;
+    padding: 4rem 0;
+
+    @media screen and (max-width: 900px) {
+        padding: 2rem 0;
+    }
+
+    .quot_section_wrapper {
+        max-width: 1600px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        
+        .quot_section_col1 {
+            flex: 1;
+            padding: 25px 0;
+            border-radius: 0 10px 10px 0;
+            border: 1px solid #606060;
+            border-left: 0;
+
+            .quot_section_col1_img1 {
+                margin-bottom: 20px;
+                padding-right: 25px;
+
+                img {
+                    width: 100%;
+                }
+            }
+            .quot_section_col1_quot_row {
+                margin-bottom: 20px;
+                padding-right: 25px;
+                
+                .quot_section_col1_quot {
+                    position: relative;
+                    max-width: 550px;
+                    border: 1px solid #393939;
+                    margin-left: auto;
+                    border-radius: 8px;
+                    padding: 10px 30px 10px 50px;
+                    color: $black;
+                    font-size: 30px;
+                    
+
+                    > * {
+                        display: inline-block;
+                    }
+
+                    img {
+                        opacity: 0.4;
+                    }
+
+                    .quot1 {
+                        position: absolute;
+                        top: 20px;
+                        left: 15px;
+                    }
+                    .quot2 {
+                        margin-left: 10px;
+                    }
+                    
+                    span {
+                        color: $red;
+                    }
+                }
+            }
+            .quot_section_col1_img2 {
+                padding-left: 25px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .quot_section_col2 {
+            flex: 1;
+
+            .quot_section_col2_text {
+                max-width: 500px;
+                color: $black;
+                h2 {
+                    font-size: 30px;
+                    margin-bottom: 20px;
+                }
+                p {
+                    font-size: 16px;
+                    line-height: 26px;
+                }
+            }
+        }
+        @media screen and (max-width: 900px) {
+            flex-direction: column;
+            align-items: flex-start;
+            .quot_section_col1 {
+                flex: unset;
+                width: 90%;
+            }
+            .quot_section_col2 {
+                flex: unset;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+        @media screen and (max-width: 800px) {
+            .quot_section_col2 {
+                .quot_section_col2_text {
+                    max-width: unset;
+                }
+            }
+        }
+    }
+}
+.quot_section_dark {
+    background: $black;
+    .quot_section_wrapper {
+        .quot_section_col1 {
+            .quot_section_col1_quot_row {
+                .quot_section_col1_quot {
+                    color: $white;
+                }
+            }
+        }
+        .quot_section_col2 {
+            .quot_section_col2_text {
+                color: $white;
+                p {
+                    color: rgba(255, 255, 255, 0.802)
+                }
+            }
+        }
+    }
+}
+.quot_section_Arabic {
+    .quot_section_wrapper {
+        .quot_section_col1 {
+            border-radius: 10px 0 0 10px;
+            border: 1px solid #606060;
+            border-right: 0;
+            .quot_section_col1_quot_row {
+                .quot_section_col1_quot {
+                    padding: 10px 50px 10px 30px;
+                    .quot1 {
+                        position: absolute;
+                        top: 20px;
+                        left: unset;
+                        right: 15px;
+                        transform: rotateY(180deg);
+                    }
+                    .quot2 {
+                        margin-left: unset;
+                        margin-right: 10px;
+                        transform: rotateY(180deg);
+                    }
+                }
+            }
+        }
+    }
+}

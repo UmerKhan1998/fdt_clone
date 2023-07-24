@@ -1,0 +1,74 @@
+@import "./mixin.scss";
+@import "./partials.scss";
+
+.ServicesChoose {
+  width: 100%;
+  padding: 60px 0px;
+  background-color: $black;
+  .ServicesChoose_wrapper {
+    @include maxWidth;
+    .ServicesChoose_title {
+      width: 100%;
+      margin-bottom: 40px;
+      h5 {
+        font-size: 1rem;
+        color: $white;
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 700;
+      }
+      h2 {
+        font-size: 2rem;
+        width: 50%;
+        color: $white;
+      }
+    }
+    .ServicesChoose_boxs {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      > div {
+        width: 32%;
+        padding: 0px 5px 20px 5px;
+
+        @media screen and (max-width: 900px) {
+          width: 50%;
+          padding:10px 0px;
+        }
+        @media screen and (max-width: 600px) {
+          width: 100%;
+        }
+      }
+    }
+    @media screen and (max-width: 900px) {
+      .ServicesChoose_title {
+        h5 {
+          font-size: 0.8rem;
+        }
+        h2 {
+          font-size: 1.7rem;
+          width: 70%;
+        }
+      }
+    }
+    @media screen and (max-width: 500px) {
+      .ServicesChoose_title {
+        h5 {
+          font-size: 0.8rem;
+        }
+        h2 {
+          font-size: 1.5rem;
+          width: 80%;
+        }
+      }
+    }
+    @media screen and (max-width: 400px) {
+      .ServicesChoose_title {
+        h2 {
+          font-size: 1.3rem;
+          width: 90%;
+        }
+      }
+    }
+  }
+}

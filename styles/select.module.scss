@@ -1,0 +1,53 @@
+@import "./mixin.scss";
+@import "./partials.scss";
+
+.dropdown {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  .dropdown_header {
+    padding: 5px 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .selectIcon {
+      //   position: absolute;
+      font-size: 2rem;
+      color: #91a5be;
+      transform: rotate(0deg);
+      transition: all 0.2s ease-in-out;
+      @include allCenter;
+    }
+    .selectIcon_active {
+      transform: rotate(180deg);
+    }
+  }
+  .dropdown_body {
+    padding: 5px;
+    border-top: 1px solid #e5e8ec;
+    display: none;
+    .dropdown_item {
+      padding: 10px;
+      &:hover {
+        cursor: pointer;
+      }
+      .dropdown_item_dot {
+        opacity: 0;
+        color: #91a5be;
+        transition: all 0.2s ease-in-out;
+      }
+      .dropdown_item_dot_Active {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// Active
+
+.dropdown_body_Active {
+  display: block !important;
+}

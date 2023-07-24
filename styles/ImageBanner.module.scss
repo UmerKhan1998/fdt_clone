@@ -1,0 +1,123 @@
+@import "./mixin.scss";
+@import "./partials.scss";
+
+.ImageBanner {
+  width: 100%;
+  overflow: hidden;
+  .ImageBanner_wrapper {
+    @include maxWidth;
+    @include verticallycenter;
+    min-height: 400px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    gap: 60px;
+    .ImageBanner_left {
+      position: relative;
+      width: 100%;
+      flex: 2;
+      height: 350px;
+      img {
+        margin: auto;
+        display: block;
+        width: auto !important;
+      }
+    }
+    .ImageBanner_right {
+      width: 100%;
+      flex: 2;
+      > img {
+        margin-bottom: 10px;
+      }
+      h1 {
+        font-size: 32px;
+        line-height: 36px;
+
+        font-weight: 800;
+        color: $black;
+        font-family: $font-Semibold;
+        margin-bottom: 10px;
+      }
+      h5 {
+        font-weight: 600;
+        font-size: 1.2rem;
+        line-height: 26px;
+        
+        color: $black;
+        margin-bottom: 10px;
+      }
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: $light-black;
+      }
+    }
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+      .ImageBanner_left {
+        flex: none;
+      }
+    }
+    // @media screen and (max-width: 500px) {
+    //   .ImageBanner_right {
+    //     h1 {
+    //       font-size: 2rem;
+    //     }
+    //     h5 {
+    //       font-size: 1rem;
+    //     }
+    //     p {
+    //       font-size: 0.8rem;
+    //     }
+    //   }
+    // }
+    @media screen and (max-width: 450px) {
+      gap: 16px;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+
+      .ImageBanner_right {
+        h1 {
+          font-size: 24px;
+          line-height: 28px;
+        }
+        h5 {
+          font-size: 16px;
+          line-height: 22px;
+        }
+        p {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
+
+.ImageBannerDark {
+  background: $black;
+  .ImageBanner_wrapper {
+    .ImageBanner_right {
+      h1 {
+        color: $white;
+      }
+      h5 {
+        color: #D7D7D7;
+      }
+      p {
+        color: #f2f2f2;
+      }
+    }
+  }
+}
+
+// Arabic
+.ImageBannerArabic {
+  .ImageBanner_wrapper {
+    .ImageBanner_right {
+      h1 {
+        font-family: $font-Arabic;
+      }
+    }
+  }
+}

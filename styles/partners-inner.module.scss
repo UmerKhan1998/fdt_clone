@@ -1,0 +1,26 @@
+@import './mixin.scss';
+@import './partials.scss';
+
+.partners_inner {
+    padding: 2rem 0;
+    background-color: $black;
+    overflow: hidden;
+
+    .partners_inner_wrapper {
+        position: relative;
+        @include maxWidth;
+
+        .partners_inner_images {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+
+            img {
+                max-width: 1000%;
+                height: auto;
+                object-fit: scale-down;
+                flex: 1;
+            }
+        }
+    }
+}
