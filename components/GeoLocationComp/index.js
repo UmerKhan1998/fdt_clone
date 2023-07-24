@@ -31,8 +31,8 @@ function GeoLocationComp() {
 
   return (
     <div>
-      {/* <h1>Locale from PC IP:</h1>
-      <p>{locale1}</p> */}
+      <h1>Locale from PC IP:</h1>
+      <p>{locale1}</p>
     </div>
   );
 }
