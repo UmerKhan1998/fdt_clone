@@ -9,6 +9,8 @@ export default async function handler(req, res) {
 
     const locale = data.country ? data.country : "Unknown";
 
+    console.log("data", locale);
+
     res.status(200).json({ locale });
   } catch (error) {
     console.error("Error fetching IP information:", error);
