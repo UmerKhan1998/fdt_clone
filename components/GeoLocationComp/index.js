@@ -6,6 +6,8 @@ import { useRouter } from "next/router";
 function GeoLocationComp() {
   const [locale1, setLocale1] = useState("Loading...");
 
+  console.log("locale1", locale1);
+
   const { locale } = useRouter();
   const router = useRouter();
   const Arabic = locale?.includes("ar");

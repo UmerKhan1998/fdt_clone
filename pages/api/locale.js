@@ -6,10 +6,9 @@ export default async function handler(req, res) {
 
     const response = await fetch(apiUrl);
     const data = await response.json();
+    console.log("data", data);
 
     const locale = data.country ? data.country : "Unknown";
-
-    console.log("data", locale);
 
     res.status(200).json({ locale });
   } catch (error) {
