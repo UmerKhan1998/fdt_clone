@@ -38,7 +38,7 @@ function GeoLocationComp() {
     )
       .then((response) => response.json())
       .then((data) => {
-        // console.log("data", data?.countryCode);
+        console.log("data", data?.countryCode);
         setLocale1(data?.countryCode);
         if (data?.countryCode === "SA") {
           router.push(`/${Arabic ? "ar" : "en"}-SA`);
@@ -50,7 +50,7 @@ function GeoLocationComp() {
         console.error("Error fetching locale:", error);
       });
 
-    // console.log("locale", locale1);
+    console.log("locale", locale1);
 
     fetch("/api/ip")
       .then((response) => response.json())
