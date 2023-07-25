@@ -15,11 +15,32 @@ function GeoLocationComp() {
 
   useEffect(() => {
     // Fetch the locale from the API endpoint
-    fetch("/api/locale")
+    // fetch("/api/locale")
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     setLocale1(data.locale);
+    //     if (data.locale === "SA") {
+    //       router.push(`/${Arabic ? "ar" : "en"}-SA`);
+    //     } else {
+    //       router.push(`/${Arabic ? "ar" : "en"}-AE`);
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     console.error("Error fetching locale:", error);
+    //   });
+
+    fetch(
+      `http://api.ipstack.com/${ip}?access_key=63a5cf7cc1508bb48771be6b5b926b34`
+      // `http://api.ipstack.com/87.251.20.34?access_key=63a5cf7cc1508bb48771be6b5b926b34` //Netherlands
+      // `http://api.ipstack.com/5.253.206.122?access_key=63a5cf7cc1508bb48771be6b5b926b34` //Poland
+      // `http://api.ipstack.com/5.253.206.122?access_key=63a5cf7cc1508bb48771be6b5b926b34` //Saudia Arabia
+      // `http://ip-api.com/json/5.253.206.122?access_key=63a5cf7cc1508bb48771be6b5b926b34` //Saudia Arabia
+    )
       .then((response) => response.json())
       .then((data) => {
-        setLocale1(data.locale);
-        if (data.locale === "SA") {
+        // console.log("data", data?.countryCode);
+        setLocale1(data?.countryCode);
+        if (data?.countryCode === "SA") {
           router.push(`/${Arabic ? "ar" : "en"}-SA`);
         } else {
           router.push(`/${Arabic ? "ar" : "en"}-AE`);
@@ -29,7 +50,7 @@ function GeoLocationComp() {
         console.error("Error fetching locale:", error);
       });
 
-    console.log("locale", locale1);
+    // console.log("locale", locale1);
 
     fetch("/api/ip")
       .then((response) => response.json())
