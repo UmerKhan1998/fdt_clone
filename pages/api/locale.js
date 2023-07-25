@@ -7,6 +7,7 @@ export default async function handler(req, res) {
     // const apiUrl = `https://ipinfo.io?token=${apiKey}`;
 
     const apiUrl = `http://ip-api.com/json/${ip}`;
+    // const apiUrl = `http://ip-api.com/json/87.251.20.34`;
 
     // const apiKey = "63a5cf7cc1508bb48771be6b5b926b34"; // Replace with your actual API key
     // const apiUrl = `http://api.ipstack.com/87.251.20.34?access_key=${apiKey}`;
@@ -14,9 +15,9 @@ export default async function handler(req, res) {
 
     const response = await fetch(apiUrl);
     const data = await response.json();
-    console.log("data", data);
+    // console.log("data", data);
 
-    const locale = data.country ? data.country : "Unknown";
+    const locale = data.countryCode ? data.countryCode : "Unknown";
 
     res.status(200).json({ locale });
   } catch (error) {

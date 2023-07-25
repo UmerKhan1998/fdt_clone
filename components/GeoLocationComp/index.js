@@ -8,7 +8,7 @@ function GeoLocationComp() {
   const [locale1, setLocale1] = useState("Loading...");
   const [ip, setIp] = useState("");
 
-  console.log("locale1", locale1);
+  // console.log("locale1", locale1);
 
   const { locale } = useRouter();
   const router = useRouter();
@@ -35,7 +35,14 @@ function GeoLocationComp() {
       .get("/api/locale")
       .then((response) => {
         // Handle the response data
-        console.log("response", response);
+        // console.log("response", response?.data.locale);
+        setLocale1(response?.data?.locale);
+
+        if (response?.data?.locale === "SA") {
+          router.push(`/${Arabic ? "ar" : "en"}-SA`);
+        } else {
+          router.push(`/${Arabic ? "ar" : "en"}-AE`);
+        }
       })
       .catch((error) => {
         // Handle any errors that occurred during the request
@@ -65,7 +72,7 @@ function GeoLocationComp() {
     //     console.error("Error fetching locale:", error);
     //   });
 
-    console.log("locale", locale1);
+    // console.log("locale", locale1);
 
     fetch("/api/ip")
       .then((response) => response.json())
