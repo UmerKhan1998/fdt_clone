@@ -30,7 +30,7 @@ function GeoLocationComp() {
     //   });
 
     fetch(
-      `http://api.ipstack.com/${ip}?access_key=63a5cf7cc1508bb48771be6b5b926b34`
+      `http://ip-api.com/json/${ip}`
       // `http://api.ipstack.com/87.251.20.34?access_key=63a5cf7cc1508bb48771be6b5b926b34` //Netherlands
       // `http://api.ipstack.com/5.253.206.122?access_key=63a5cf7cc1508bb48771be6b5b926b34` //Poland
       // `http://api.ipstack.com/5.253.206.122?access_key=63a5cf7cc1508bb48771be6b5b926b34` //Saudia Arabia
@@ -38,7 +38,7 @@ function GeoLocationComp() {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log("data", data?.countryCode);
+        console.log("data", data);
         setLocale1(data?.countryCode);
         if (data?.countryCode === "SA") {
           router.push(`/${Arabic ? "ar" : "en"}-SA`);
