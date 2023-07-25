@@ -29,8 +29,9 @@ function GeoLocationComp() {
     //     console.error("Error fetching locale:", error);
     //   });
 
+    console.log("dataIp", ip);
     fetch(
-      `http://ip-api.com/json/${ip}`
+      `http://ip-api.com/json/${ip && ip}`
       // `http://api.ipstack.com/87.251.20.34?access_key=63a5cf7cc1508bb48771be6b5b926b34` //Netherlands
       // `http://api.ipstack.com/5.253.206.122?access_key=63a5cf7cc1508bb48771be6b5b926b34` //Poland
       // `http://api.ipstack.com/5.253.206.122?access_key=63a5cf7cc1508bb48771be6b5b926b34` //Saudia Arabia
@@ -38,7 +39,7 @@ function GeoLocationComp() {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log("data", data);
+        // console.log("data", data);
         setLocale1(data?.countryCode);
         if (data?.countryCode === "SA") {
           router.push(`/${Arabic ? "ar" : "en"}-SA`);
@@ -50,7 +51,7 @@ function GeoLocationComp() {
         console.error("Error fetching locale:", error);
       });
 
-    console.log("locale", locale1);
+    // console.log("locale", locale1);
 
     fetch("/api/ip")
       .then((response) => response.json())
