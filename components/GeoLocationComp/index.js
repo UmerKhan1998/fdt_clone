@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 
 function GeoLocationComp() {
   const [locale1, setLocale1] = useState("Loading...");
+  const [ip, setIp] = useState("");
 
   console.log("locale1", locale1);
 
@@ -29,12 +30,17 @@ function GeoLocationComp() {
       });
 
     console.log("locale", locale1);
+
+    fetch("/api/ip")
+      .then((response) => response.json())
+      .then((data) => setIp(data.ip));
   }, []);
 
   return (
     <div>
       <h1>Locale from PC IP:</h1>
       <p>{locale1}</p>
+      <p>Your IP address: {ip}</p>
     </div>
   );
 }
