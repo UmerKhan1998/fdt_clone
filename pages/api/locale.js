@@ -1,8 +1,16 @@
 // pages/api/locale.js
 export default async function handler(req, res) {
   try {
-    const apiKey = "19d1d2c83aaaff"; // Replace with your actual API key
-    const apiUrl = `https://ipinfo.io?token=${apiKey}`;
+    const ip = req.headers["x-forwarded-for"] || req.connection.remoteAddress;
+
+    // const apiKey = "19d1d2c83aaaff"; // Replace with your actual API key
+    // const apiUrl = `https://ipinfo.io?token=${apiKey}`;
+
+    const apiUrl = `http://ip-api.com/json/${ip}`;
+
+    // const apiKey = "63a5cf7cc1508bb48771be6b5b926b34"; // Replace with your actual API key
+    // const apiUrl = `http://api.ipstack.com/87.251.20.34?access_key=${apiKey}`;
+    // // const apiUrl = `http://api.ipstack.com/${ip}?access_key=${apiKey}`;
 
     const response = await fetch(apiUrl);
     const data = await response.json();
