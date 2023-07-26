@@ -16,6 +16,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import ServicesChoose from "@/components/ServicesChoose/ServicesChoose";
 import TalkUsNowSection from "@/components/shared/TalkUsNowSection";
 import ContactForm from "@/components/ContactIsForm/ContactForm";
+import GeoLocationComp from "@/components/GeoLocationComp";
 
 const FinancAndBanking = () => {
   const Meta = useTranslations("Meta");
@@ -161,6 +162,9 @@ const FinancAndBanking = () => {
         <meta property="og:description" content={Meta("HealthcareDesc")} />
         <meta property="og:type" content="website"></meta>
       </Head>
+
+      <GeoLocationComp />
+
       <Banner
         title={t("title")}
         dec={t("dec")}

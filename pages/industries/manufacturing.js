@@ -12,6 +12,7 @@ import Banner from "@/components/banner/Banner";
 import ServicesChoose from "@/components/ServicesChoose/ServicesChoose";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import TalkUsNowSection from "@/components/shared/TalkUsNowSection";
+import GeoLocationComp from "@/components/GeoLocationComp";
 
 const Manufacturing = () => {
   const Meta = useTranslations("Meta");
@@ -108,6 +109,9 @@ const Manufacturing = () => {
         <meta property="og:description" content={Meta("ManufacturingDesc")} />
         <meta property="og:type" content="website"></meta>
       </Head>
+
+      <GeoLocationComp />
+
       <Banner
         title={t("title")}
         dec={t("dec")}

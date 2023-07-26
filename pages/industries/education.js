@@ -11,6 +11,7 @@ import { useTranslations } from "next-intl";
 import Banner from "@/components/banner/Banner";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import TalkUsNowSection from "@/components/shared/TalkUsNowSection";
+import GeoLocationComp from "@/components/GeoLocationComp";
 
 const Education = () => {
   const Meta = useTranslations("Meta");
@@ -122,6 +123,9 @@ const Education = () => {
         <meta property="og:description" content={Meta("EducationDesc")} />
         <meta property="og:type" content="website"></meta>
       </Head>
+
+      <GeoLocationComp />
+
       <Banner
         title={t("title")}
         dec={t("dec")}

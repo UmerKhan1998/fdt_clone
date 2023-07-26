@@ -13,6 +13,7 @@ import Banner from "@/components/banner/Banner";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import PenetrationTesting from "@/components/PenetrationTesting";
 import TalkUsNowSection from "@/components/shared/TalkUsNowSection";
+import GeoLocationComp from "@/components/GeoLocationComp";
 
 const Retail = () => {
   const Meta = useTranslations("Meta");
@@ -109,6 +110,9 @@ const Retail = () => {
         <meta property="og:description" content={Meta("RetailDesc")} />
         <meta property="og:type" content="website"></meta>
       </Head>
+
+      <GeoLocationComp />
+
       <Banner
         title={t("title")}
         dec={t("dec")}

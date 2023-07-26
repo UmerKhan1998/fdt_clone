@@ -24,6 +24,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import PenetrationTesting from "@/components/PenetrationTesting";
 import TalkUsNowSection from "@/components/shared/TalkUsNowSection";
 import PartnersInner from "@/components/PartnersInner";
+import GeoLocationComp from "@/components/GeoLocationComp";
 
 const index = () => {
   const Meta = useTranslations("Meta");
@@ -148,6 +149,9 @@ const index = () => {
         <meta property="og:description" content={Meta("CyberarkDesc")} />
         <meta property="og:type" content="website"></meta>
       </Head>
+
+      <GeoLocationComp />
+
       <Banner 
         title={""} 
         subdetail={t("subdetail")} 

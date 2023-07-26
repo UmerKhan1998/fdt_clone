@@ -14,6 +14,10 @@ function GeoLocationComp() {
   const router = useRouter();
   const Arabic = locale?.includes("ar");
 
+  const { pathname, asPath, query } = router
+
+  console.log('url',pathname, asPath, query)
+
   useEffect(() => {
     // Fetch the locale from the API endpoint
     // fetch("/api/locale")
@@ -39,9 +43,9 @@ function GeoLocationComp() {
         setLocale1(response?.data?.locale);
 
         if (response?.data?.locale === "SA") {
-          router.push(`/${Arabic ? "ar" : "en"}-SA`);
+          router.push(`/${Arabic ? "ar" : "en"}-SA/${asPath}`);
         } else {
-          router.push(`/${Arabic ? "ar" : "en"}-AE`);
+          router.push(`/${Arabic ? "ar" : "en"}-AE/${asPath}`);
         }
       })
       .catch((error) => {

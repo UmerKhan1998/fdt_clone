@@ -19,6 +19,7 @@ import ImageBanner from '@/components/ImageBanner/ImageBanner';
 import ExpertStrategies from '@/components/ExpertStrategies';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import ContactForm from '@/components/ContactIsForm/ContactForm';
+import GeoLocationComp from '@/components/GeoLocationComp';
 
 const index = () => {
   const Meta = useTranslations("Meta");
@@ -96,6 +97,9 @@ const index = () => {
         <meta property="og:description" content={Meta("IBMDesc")} />
         <meta property="og:type" content="website"></meta>
       </Head>
+
+      <GeoLocationComp />
+
       <Banner
         title={t("title")}
         subdetail={""}

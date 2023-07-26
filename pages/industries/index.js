@@ -25,6 +25,7 @@ import ExpertStrategies from "@/components/ExpertStrategies";
 
 // React Intl
 import { useTranslations } from "next-intl";
+import GeoLocationComp from "@/components/GeoLocationComp";
 
 const index = () => {
   const Meta = useTranslations("Meta");
@@ -98,6 +99,9 @@ const index = () => {
         <meta property="og:description" content={Meta("IndustryDesc")} />
         <meta property="og:type" content="website"></meta>
       </Head>
+
+      <GeoLocationComp />
+
       <Banner
         title={t("title")}
         dec={''}

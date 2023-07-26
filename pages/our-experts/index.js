@@ -46,6 +46,7 @@ import TextSection from "@/components/TextSection";
 import TeamSection from "@/components/TeamSection";
 import TalkUsNowSection from "@/components/shared/TalkUsNowSection";
 import CertificationsSection from "@/components/CertificationsSection";
+import GeoLocationComp from "@/components/GeoLocationComp";
 
 const index = () => {
   const Meta = useTranslations("Meta");
@@ -285,6 +286,9 @@ const index = () => {
         <meta property="og:description" content={Meta("OurExpertsDesc")} />
         <meta property="og:type" content="website"></meta>
       </Head>
+
+      <GeoLocationComp />
+
       <Banner
         title={t("title")}
         dec={

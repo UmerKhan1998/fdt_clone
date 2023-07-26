@@ -25,6 +25,7 @@ import TalkUsNowSection from "@/components/shared/TalkUsNowSection";
 import PenetrationTesting from "@/components/PenetrationTesting";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import LogoSection from "@/components/LogoSection";
+import GeoLocationComp from "@/components/GeoLocationComp";
 
 const index = () => {
   const Meta = useTranslations("Meta");
@@ -142,6 +143,9 @@ const index = () => {
         <meta property="og:description" content={Meta("ECCDesc")} />
         <meta property="og:type" content="website"></meta>
       </Head>
+
+      <GeoLocationComp />
+
       <Banner title={t("ECC")} dec={t("dec")} titleWidth={"100%"} bannerImage={InternalBanner} />
 
       <ServicesSlider

@@ -9,6 +9,7 @@ import EmpoweringDevelopers from "@/components/EmpoweringDevelopers";
 // React Intl
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/router";
+import GeoLocationComp from "@/components/GeoLocationComp";
 
 const index = () => {
   const { locale } = useRouter();
@@ -19,6 +20,9 @@ const index = () => {
   return (
     <>
       <Banner title={t("title")} dec={t("desc")} />
+
+      <GeoLocationComp />
+
       <ImageBanner
         picture={img}
         title={t1("Digital Technology Experts Offer Strategies for Success")}

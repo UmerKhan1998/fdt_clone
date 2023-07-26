@@ -32,6 +32,7 @@ import TalkUsNowSection from '@/components/shared/TalkUsNowSection';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import ContactForm from '@/components/ContactIsForm/ContactForm';
 import QuotSection from '@/components/QuotSection';
+import GeoLocationComp from '@/components/GeoLocationComp';
 
 const index = () => {
     const Meta = useTranslations("Meta");
@@ -159,6 +160,9 @@ const index = () => {
           <meta property="og:description" content={Meta("FORDesc")} />
           <meta property="og:type" content="website"></meta>
         </Head>
+
+      <GeoLocationComp />
+
         <Banner
           title={t("title")}
           subdetail={t("subdetail")}

@@ -28,6 +28,7 @@ import TalkUsNowSection from "@/components/shared/TalkUsNowSection";
 import ServicesChoose from "@/components/ServicesChoose/ServicesChoose";
 import PenetrationTesting from "@/components/PenetrationTesting";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import GeoLocationComp from "@/components/GeoLocationComp";
 
 const index = () => {
   const Meta = useTranslations("Meta");
@@ -182,6 +183,9 @@ const index = () => {
         <meta property="og:description" content={Meta("GrcDesc")} />
         <meta property="og:type" content="website"></meta>
       </Head>
+
+      <GeoLocationComp />
+
       <Banner title={t("title")} dec={t("dec")} titleWidth={"100%"} bannerImage={InternalBanner} />
 
       <ImageBanner

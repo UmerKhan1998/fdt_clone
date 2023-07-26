@@ -19,6 +19,7 @@ import WhyChooseUs from '@/components/WhyChooseUs';
 import PenetrationTesting from '@/components/PenetrationTesting';
 import TalkUsNowSection from '@/components/shared/TalkUsNowSection';
 import ContactForm from '@/components/ContactIsForm/ContactForm';
+import GeoLocationComp from '@/components/GeoLocationComp';
 
 const index = () => {
     const Meta = useTranslations("Meta");
@@ -115,6 +116,9 @@ const index = () => {
               <meta name="viewport" content="width=device-width, initial-scale=1" />
               <link rel="icon" href="/favicon.png" />
             </Head>
+
+            <GeoLocationComp />
+
             <Banner
               title={t("title")}
               subdetail={t("subdetail")}

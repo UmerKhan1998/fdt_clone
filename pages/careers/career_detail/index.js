@@ -9,11 +9,14 @@ import { useTranslations } from "next-intl";
 import Banner from "@/components/banner/Banner";
 import CareesDetail from "@/components/CareerDetail/CareesDetail";
 import ContactForm from "@/components/ContactIsForm/ContactForm";
+import GeoLocationComp from "@/components/GeoLocationComp";
 const index = () => {
   const t = useTranslations("Career_detail");
 
   return (
     <>
+      <GeoLocationComp />
+
       <Head>
         <title>{t("Software/Engineer developer")}</title>
         <meta name="description" content={t("Software/Engineer developer")} />

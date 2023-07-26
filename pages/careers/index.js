@@ -16,6 +16,7 @@ import JoinFtd from "@/components/JoinFtd";
 import ContactForm from "@/components/ContactIsForm/ContactForm";
 import ImageBanner from "@/components/ImageBanner/ImageBanner";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import GeoLocationComp from "@/components/GeoLocationComp";
 
 const index = () => {
   const Meta = useTranslations("Meta");
@@ -64,6 +65,9 @@ const index = () => {
         <meta property="og:description" content={Meta("CareerDesc")} />
         <meta property="og:type" content="website"></meta>
       </Head>
+
+      <GeoLocationComp />
+      
       <Banner title={t("title")} subdetail={''} dec={""} titleWidth={"100%"} bannerImage={InternalBanner} />
       {/* <ImageBanner
         picture={CareerImageBannerImg}

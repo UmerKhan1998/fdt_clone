@@ -10,6 +10,7 @@ import InternalBanner from "@/assets/images/InternalBanner.png";
 import news1 from "../../assets/images/news1.svg";
 
 import BlogsGridContainer from "@/components/BlogsGridContainer/BlogsGridContainer";
+import GeoLocationComp from "@/components/GeoLocationComp";
 
 const index = () => {
   const Meta = useTranslations("Meta");
@@ -91,6 +92,8 @@ const index = () => {
 
   return (
     <>
+      <GeoLocationComp />
+
       <Head>
         <title>{Meta("BlogTitle")}</title>
         <meta name="description" content={Meta("BlogDesc")} />

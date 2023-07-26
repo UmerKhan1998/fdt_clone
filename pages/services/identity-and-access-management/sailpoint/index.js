@@ -30,6 +30,7 @@ import ContactForm from "@/components/ContactIsForm/ContactForm";
 import PenetrationTesting from "@/components/PenetrationTesting";
 import PartnersInner from "@/components/PartnersInner";
 import ExpertStrategies from "@/components/ExpertStrategies";
+import GeoLocationComp from "@/components/GeoLocationComp";
 
 const index = () => {
   const Meta = useTranslations("Meta");
@@ -173,6 +174,9 @@ const index = () => {
         <meta property="og:description" content={Meta("SailpointDesc")} />
         <meta property="og:type" content="website"></meta>
       </Head>
+
+      <GeoLocationComp />
+
       <Banner 
         title={""} 
         subdetail={t("subdetail")} 

@@ -14,6 +14,7 @@ import InternalBanner from "@/assets/images/SubIndustryBanner.png";
 import siem from "../../../assets/images/siem.svg";
 import ContactForm from "@/components/ContactIsForm/ContactForm";
 import TalkUsNowSection from "@/components/shared/TalkUsNowSection";
+import GeoLocationComp from "@/components/GeoLocationComp";
 
 const index = () => {
   const Meta = useTranslations("Meta");
@@ -81,6 +82,9 @@ const index = () => {
         <meta property="og:description" content={Meta("SubIndustryDesc")} />
         <meta property="og:type" content="website"></meta>
       </Head>
+
+      <GeoLocationComp />
+      
       <Banner
         title={t("finance and Banking")}
         dec={

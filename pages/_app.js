@@ -40,7 +40,7 @@ export default function App({ Component, pageProps }) {
         >
           <NextIntlProvider locale={locale} messages={messages[locale]}>
             <ToastContainer />
-            <GeoLocationComp/>
+            {/* <GeoLocationComp/> */}
             <Component {...pageProps} dir={getDirection(locale)} />
             <Script src="https://embed.tawk.to/64620efbad80445890ed00d7/1h0fgl23e" />
             <Footer />

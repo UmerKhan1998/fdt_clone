@@ -23,6 +23,7 @@ import ServicesChoose from "@/components/ServicesChoose/ServicesChoose";
 import TalkUsNowSection from "@/components/shared/TalkUsNowSection";
 import PenetrationTesting from "@/components/PenetrationTesting";
 import ContactForm from "@/components/ContactIsForm/ContactForm";
+import GeoLocationComp from "@/components/GeoLocationComp";
 
 const FinancAndBanking = () => {
   const Meta = useTranslations("Meta");
@@ -207,6 +208,9 @@ const FinancAndBanking = () => {
         <meta property="og:description" content={Meta("FinanceAndBankingDesc")} />
         <meta property="og:type" content="website"></meta>
       </Head>
+
+      <GeoLocationComp />
+
       <Banner
         title={t("title")}
         dec={t("dec")}

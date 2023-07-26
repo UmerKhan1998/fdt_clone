@@ -46,6 +46,7 @@ import TalkUsNowSection from "@/components/shared/TalkUsNowSection";
 import BorderedBrands from "@/components/BorderedBrands";
 import ProvenProcess from "@/components/ProvenProcess";
 import ExpertStrategies from "@/components/ExpertStrategies";
+import GeoLocationComp from "@/components/GeoLocationComp";
 
 const index = () => {
   const Meta = useTranslations("Meta");
@@ -314,6 +315,9 @@ const index = () => {
         <meta property="og:description" content={Meta("IAMDesc")} />
         <meta property="og:type" content="website"></meta>
       </Head>
+
+      <GeoLocationComp />
+
       <Banner
         title={t("title")}
         subdetail={t("subdetail")}

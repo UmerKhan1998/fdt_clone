@@ -25,6 +25,7 @@ import partners6 from "../assets/images/partners6.svg";
 import partners7 from "../assets/images/partners7.svg";
 import TalkUsNowSection from "@/components/shared/TalkUsNowSection";
 import ContactForm from "@/components/ContactIsForm/ContactForm";
+import GeoLocationComp from "@/components/GeoLocationComp";
 
 export default function Home() {
   const t = useTranslations("Meta");
@@ -184,6 +185,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
+
+      <GeoLocationComp />
+
       <Dashboard />
       <DigitalAssets
         title={t1('heading')}

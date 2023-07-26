@@ -40,6 +40,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import TextSection from "@/components/TextSection";
 import TalkUsNowSection from "@/components/shared/TalkUsNowSection";
 import PartnersFull from "@/components/PartnersFull";
+import GeoLocationComp from "@/components/GeoLocationComp";
 
 const index = () => {
   const Meta = useTranslations("Meta");
@@ -256,6 +257,9 @@ const index = () => {
         <meta property="og:description" content={Meta("AboutDesc")} />
         <meta property="og:type" content="website"></meta>
       </Head>
+
+      <GeoLocationComp />
+
       <Banner title={t("About Us")} dec={""} titleWidth={"100%"} />
       {/* <WhyChooseUs
         title={t1("title")}

@@ -13,6 +13,7 @@ import TextSection from "@/components/TextSection";
 import ServicesChoose from "@/components/ServicesChoose/ServicesChoose";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import TalkUsNowSection from "@/components/shared/TalkUsNowSection";
+import GeoLocationComp from "@/components/GeoLocationComp";
 
 const Legal = () => {
   const Meta = useTranslations("Meta");
@@ -137,6 +138,9 @@ const Legal = () => {
         <meta property="og:description" content={Meta("LegalDesc")} />
         <meta property="og:type" content="website"></meta>
       </Head>
+
+      <GeoLocationComp />
+
       <Banner
         title={t("title")}
         dec={t("dec")}

@@ -23,6 +23,7 @@ import TalkUsNowSection from '@/components/shared/TalkUsNowSection';
 import BorderedBrands from '@/components/BorderedBrands';
 import Faqs from '@/components/Faqs/Faqs';
 import ContactForm from '@/components/ContactIsForm/ContactForm';
+import GeoLocationComp from '@/components/GeoLocationComp';
 
 const index = () => {
     const Meta = useTranslations("Meta");
@@ -142,6 +143,9 @@ const index = () => {
                 <meta property="og:description" content={Meta("EPPDesc")} />
                 <meta property="og:type" content="website"></meta>
             </Head>
+
+      <GeoLocationComp />
+
             <Banner
                 title={t("title")}
                 subdetail={t("subdetail")}

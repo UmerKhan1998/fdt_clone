@@ -27,6 +27,7 @@ import NetworkAssessment from '@/components/NetworkAssessment';
 import ContactForm from '@/components/ContactIsForm/ContactForm';
 import TalkUsNowSection from '@/components/shared/TalkUsNowSection';
 import PartnersInner from '@/components/PartnersInner';
+import GeoLocationComp from '@/components/GeoLocationComp';
 
 const index = () => {
   const Meta = useTranslations("Meta");
@@ -194,6 +195,9 @@ const index = () => {
         <meta property="og:description" content={Meta("beyondtrustDesc")} />
         <meta property="og:type" content="website"></meta>
       </Head>
+
+      <GeoLocationComp />
+
       <Banner
         title={""}
         dec={t1("desc")}

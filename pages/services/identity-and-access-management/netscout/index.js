@@ -26,6 +26,7 @@ import NetscoutPenetrationTesting from "../../../../assets/images/NetscoutPenetr
 import WhyChooseUs from '@/components/WhyChooseUs';
 import ContactForm from '@/components/ContactIsForm/ContactForm';
 import PartnersInner from '@/components/PartnersInner';
+import GeoLocationComp from '@/components/GeoLocationComp';
 
 const index = () => {
   const Meta = useTranslations("Meta");
@@ -172,6 +173,9 @@ const index = () => {
         <meta property="og:description" content={Meta("NetscoutDesc")} />
         <meta property="og:type" content="website"></meta>
       </Head>
+
+      <GeoLocationComp />
+
       <Banner
         title={""}
         dec={t(

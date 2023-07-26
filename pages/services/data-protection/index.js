@@ -36,6 +36,7 @@ import TalkUsNowSection from '@/components/shared/TalkUsNowSection';
 import ImageBanner from '@/components/ImageBanner/ImageBanner';
 import Partners from '@/components/Partners';
 import ContactForm from '@/components/ContactIsForm/ContactForm';
+import GeoLocationComp from '@/components/GeoLocationComp';
 
 const index = () => {
     const Meta = useTranslations("Meta");
@@ -287,6 +288,9 @@ const index = () => {
               <meta property="og:description" content={Meta("DPDesc")} />
               <meta property="og:type" content="website"></meta>
             </Head>
+
+            <GeoLocationComp />
+
             <Banner
               title={t("title")}
               subdetail={""}

@@ -44,6 +44,7 @@ import ContactForm from "@/components/ContactIsForm/ContactForm";
 import Banner from "@/components/banner/Banner";
 import Partners from "@/components/Partners";
 import TalkUsNowSection from "@/components/shared/TalkUsNowSection";
+import GeoLocationComp from "@/components/GeoLocationComp";
 
 const index = () => {
   const Meta = useTranslations("Meta");
@@ -362,6 +363,9 @@ const index = () => {
         <meta property="og:description" content={Meta("VAPTDesc")} />
         <meta property="og:type" content="website"></meta>
       </Head>
+
+      <GeoLocationComp />
+
       <Banner title={t("title")} subdetail={""} dec={t("dec")} bannerImage={InternalBanner} />
       <WhyChooseUs
         title={t1("title")}

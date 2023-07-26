@@ -15,6 +15,7 @@ import ExpertStrategies from "@/components/ExpertStrategies";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import TalkUsNowSection from "@/components/shared/TalkUsNowSection";
 import ContactForm from "@/components/ContactIsForm/ContactForm";
+import GeoLocationComp from "@/components/GeoLocationComp";
 
 const Government = () => {
   const Meta = useTranslations("Meta");
@@ -163,6 +164,9 @@ const Government = () => {
         <meta property="og:description" content={Meta("GovernmentDesc")} />
         <meta property="og:type" content="website"></meta>
       </Head>
+
+      <GeoLocationComp />
+
       <Banner
         title={t("title")}
         dec={t("dec")}

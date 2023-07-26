@@ -32,6 +32,7 @@ import ServicesSlider from '@/components/shared/ServicesSlider';
 import ProvenProcess from '@/components/ProvenProcess';
 import ContactForm from '@/components/ContactIsForm/ContactForm';
 import QuotSection from '@/components/QuotSection';
+import GeoLocationComp from '@/components/GeoLocationComp';
 
 const index = () => {
   const Meta = useTranslations("Meta");
@@ -153,6 +154,9 @@ const index = () => {
         <meta property="og:description" content={Meta("SOPDesc")} />
         <meta property="og:type" content="website"></meta>
       </Head>
+
+      <GeoLocationComp />
+
       <Banner
         title={t("title")}
         subdetail={t("subdetail")}

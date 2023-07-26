@@ -24,6 +24,7 @@ import Textarea from "@/components/shared/textarea";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import JobOpeningCard from "@/components/JobOpenings/JobOpeningCard";
+import GeoLocationComp from "@/components/GeoLocationComp";
 
 const index = () => {
   const { locale } = useRouter();
@@ -136,6 +137,9 @@ const index = () => {
         />
         <meta property="og:type" content="website"></meta>
       </Head>
+
+      <GeoLocationComp />
+
       <Banner
         title={t2("JobTitle")}
         titleWidth={"100%"}
