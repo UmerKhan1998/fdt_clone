@@ -44,14 +44,14 @@ function GeoLocationComp() {
 
         if (response?.data?.locale === "SA") {
           router.push(`/${Arabic ? "ar" : "en"}-SA/${asPath}`);
-          router.push({ pathname, query }, asPath, {
-            locale: `${Arabic ? "ar" : "en"}-${localeCountry}`
-          })
+          // router.push({ pathname, query }, asPath, {
+          //   locale: `${Arabic ? "ar" : "en"}-${localeCountry}`
+          // })
         } else {
           router.push(`/${Arabic ? "ar" : "en"}-AE/${asPath}`);
-            router.push({ pathname, query }, asPath, {
-              locale: `${Arabic ? "ar" : "en"}-${localeCountry}`
-            })
+            // router.push({ pathname, query }, asPath, {
+            //   locale: `${Arabic ? "ar" : "en"}-${localeCountry}`
+            // })
         }
       })
       .catch((error) => {
