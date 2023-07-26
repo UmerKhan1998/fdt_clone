@@ -8,7 +8,7 @@ function GeoLocationComp() {
   const [locale1, setLocale1] = useState("Loading...");
   const [ip, setIp] = useState("");
 
-  // console.log("locale1", locale1);
+  console.log("locale1", locale1);
 
   const { locale } = useRouter();
   const router = useRouter();
@@ -81,9 +81,9 @@ function GeoLocationComp() {
 
   return (
     <div>
-      <h1>Locale from PC IP:</h1>
+      {/* <h1>Locale from PC IP:</h1>
       <p>{locale1}</p>
-      <p>Your IP address: {ip}</p>
+      <p>Your IP address: {ip}</p> */}
     </div>
   );
 }
