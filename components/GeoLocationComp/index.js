@@ -14,6 +14,8 @@ function GeoLocationComp() {
   const router = useRouter();
   const Arabic = locale?.includes("ar");
 
+  const localeCountry = locale?.split("-")[1]
+
   const { pathname, asPath, query } = router
 
   console.log('url',pathname, asPath, query)
@@ -43,15 +45,17 @@ function GeoLocationComp() {
         setLocale1(response?.data?.locale);
 
         if (response?.data?.locale === "SA") {
-          router.push(`/${Arabic ? "ar" : "en"}-SA/${asPath}`);
-          // router.push({ pathname, query }, asPath, {
-          //   locale: `${Arabic ? "ar" : "en"}-${localeCountry}`
-          // })
+          // router.push(`/${Arabic ? "ar" : "en"}-SA/${asPath}`);
+          router.push({ pathname, query }, asPath, {
+            locale: `${Arabic ? "ar" : "en"}-SA`
+          })
+          // router.push(asPath, {query: {locale: `${Arabic ? "ar" : "en"}-${localeCountry}`}});
         } else {
-          router.push(`/${Arabic ? "ar" : "en"}-AE/${asPath}`);
-            // router.push({ pathname, query }, asPath, {
-            //   locale: `${Arabic ? "ar" : "en"}-${localeCountry}`
-            // })
+          // router.push(`/${Arabic ? "ar" : "en"}-AE/${asPath}`);
+          router.push({ pathname, query }, asPath, {
+              locale: `${Arabic ? "ar" : "en"}-AE`
+            })
+            // router.push(asPath, {query: {locale: `${Arabic ? "ar" : "en"}-${localeCountry}`}});
         }
       })
       .catch((error) => {
