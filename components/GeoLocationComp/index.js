@@ -49,9 +49,9 @@ function GeoLocationComp() {
           })
         } else {
           router.push(`/${Arabic ? "ar" : "en"}-AE/${asPath}`);
-          router.push({ pathname, query }, asPath, {
-            locale: `${Arabic ? "ar" : "en"}-${localeCountry}`
-          })
+            router.push({ pathname, query }, asPath, {
+              locale: `${Arabic ? "ar" : "en"}-${localeCountry}`
+            })
         }
       })
       .catch((error) => {
