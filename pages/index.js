@@ -256,7 +256,7 @@ export default function Home() {
 
   return (
     <>
-      <GeoLocationComp />
+      {/* <GeoLocationComp /> */}
       <Head>
         <title>{Meta("HomeTitle")}</title>
         <meta name="description" content={Meta("HomeDesc")} />
