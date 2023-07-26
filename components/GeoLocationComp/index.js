@@ -8,7 +8,7 @@ function GeoLocationComp() {
   const [locale1, setLocale1] = useState("Loading...");
   const [ip, setIp] = useState("");
 
-  console.log("locale1", locale1);
+  console.log("locale", locale1);
 
   const { locale } = useRouter();
   const router = useRouter();

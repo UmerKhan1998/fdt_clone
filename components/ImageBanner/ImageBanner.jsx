@@ -10,7 +10,6 @@ import { useRouter } from "next/router";
 const ImageBanner = ({ picture, brandLogo, title, subtitle, dec, align, mode }) => {
   const { locale } = useRouter();
   const Arabic = locale?.includes("ar");
-  console.log("brandLogo", brandLogo);
   return (
     <>
       <div

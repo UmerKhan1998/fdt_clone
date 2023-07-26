@@ -25,7 +25,7 @@ const Navbar = () => {
 
   const t = useTranslations("Navbar");
 
-  console.log("locale", locale?.includes("en"))
+  // console.log("locale", locale?.includes("en"))
 
   const Arabic = locale?.includes("ar");
   const English = locale?.includes("en");
@@ -60,7 +60,6 @@ const Navbar = () => {
     const newLocale = locale === "ar" ? "en" : "ar";
     const localeLang = locale?.split("-")[0]
     const localeCountry = locale?.split("-")[1]
-    console.log('locale', localeLang, localeCountry)
     if (localeLang === "en") {
       router.push(`/ar-${localeCountry}`);
     } else {
@@ -334,7 +333,6 @@ const Navbar = () => {
               }
             }
           >
-            {console.log("kgfkufafd8asudywadoas", English, Arabic)}
             <TbWorld />
             {English &&
               <h6>{"AR"}</h6>

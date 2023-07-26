@@ -39,8 +39,6 @@ const Dashboard = () => {
   const Arabic = locale?.includes("ar");
   const t = useTranslations("Dashboard");
 
-  console.log("uygfjfduftfao8dya", locales, locale, useTranslations("abc"));
-
   const handleLeftNavigation = () => {
     if (swiperRef.current) {
       swiperRef.current.slidePrev();
